@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/athlete_reg_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#020617"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/tv_reg_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Athlete Registration"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Register a new talent to your academy"
+            android:textColor="#94A3B8"
+            android:textSize="14sp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:cardCornerRadius="12dp"
+            app:cardBackgroundColor="#1E293B">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <ImageView
+                    android:id="@+id/iv_athlete_photo"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:src="@android:drawable/ic_menu_camera"
+                    android:background="#0F172A"
+                    android:padding="20dp"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:text="Upload Athlete Photo"
+                    android:textColor="#3B82F6"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/et_athlete_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:hint="Athlete Name"
+                    android:textColor="@color/white"
+                    android:textColorHint="#64748B"
+                    android:backgroundTint="#3B82F6" />
+
+                <EditText
+                    android:id="@+id/et_dob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="Date of Birth (YYYY-MM-DD)"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#3B82F6" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="12dp">
+                    <EditText
+                        android:id="@+id/et_age"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Age"
+                        android:focusable="false"
+                        android:inputType="number"
+                        android:textColor="@color/white"
+                        android:backgroundTint="#3B82F6" />
+                    <Spinner
+                        android:id="@+id/sp_gender"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="#3B82F6" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="12dp">
+                    <EditText
+                        android:id="@+id/et_height"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Height (cm)"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/white"
+                        android:backgroundTint="#3B82F6" />
+                    <EditText
+                        android:id="@+id/et_weight"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Weight (kg)"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/white"
+                        android:backgroundTint="#3B82F6" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/et_bmi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="BMI (Auto)"
+                    android:focusable="false"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#3B82F6" />
+
+                <EditText
+                    android:id="@+id/et_blood_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="Blood Group"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#3B82F6" />
+
+                <EditText
+                    android:id="@+id/et_admission_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="Admission Number"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#3B82F6" />
+
+                <EditText
+                    android:id="@+id/et_sport_domain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="Primary Sport Domain"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#3B82F6" />
+
+                <EditText
+                    android:id="@+id/et_secondary_sport"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="Secondary Sport (Optional)"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#3B82F6" />
+
+                <EditText
+                    android:id="@+id/et_position"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="Playing Position"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#3B82F6" />
+
+                <EditText
+                    android:id="@+id/et_exp_years"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="Experience (Years)"
+                    android:inputType="number"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#3B82F6" />
+
+                <Spinner
+                    android:id="@+id/sp_dominant_side"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:backgroundTint="#3B82F6" />
+
+                <EditText
+                    android:id="@+id/et_parent_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="Parent Name"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#3B82F6" />
+
+                <EditText
+                    android:id="@+id/et_parent_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="Parent Contact Number"
+                    android:inputType="phone"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#3B82F6" />
+
+                <EditText
+                    android:id="@+id/et_contact_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="Athlete Mobile Number"
+                    android:inputType="phone"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#3B82F6" />
+
+                <EditText
+                    android:id="@+id/et_emergency_contact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="Emergency Contact (Name &amp; Phone)"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#3B82F6" />
+
+                <EditText
+                    android:id="@+id/et_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="Email Address"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#3B82F6" />
+
+                <EditText
+                    android:id="@+id/et_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="Home Address"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#3B82F6" />
+
+                <EditText
+                    android:id="@+id/et_nationality"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="Nationality"
+                    android:text="Indian"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#3B82F6" />
+
+                <EditText
+                    android:id="@+id/et_aadhaar_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="Aadhaar / Student ID"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#3B82F6" />
+
+                <EditText
+                    android:id="@+id/et_medical_history"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="12dp"
+                    android:hint="Medical History / Injuries"
+                    android:gravity="top"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#3B82F6" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="24dp"
+                    android:background="#334155" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Documents &amp; Verification"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btn_upload_id_proof"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Upload ID Proof (Aadhaar/ID)"
+                    app:strokeColor="#3B82F6" />
+
+                <Button
+                    android:id="@+id/btn_upload_medical"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Upload Medical Certificate"
+                    app:strokeColor="#3B82F6" />
+
+                <Button
+                    android:id="@+id/btn_upload_consent"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Upload Parent Consent Form"
+                    app:strokeColor="#3B82F6" />
+
+                <Button
+                    android:id="@+id/btn_save_athlete"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="32dp"
+                    android:text="Register Athlete"
+                    android:backgroundTint="#10B981"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</ScrollView>

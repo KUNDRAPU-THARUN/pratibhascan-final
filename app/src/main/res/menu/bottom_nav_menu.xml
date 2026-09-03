@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@android:drawable/ic_menu_today"
+        android:title="@string/nav_home" />
+    <item
+        android:id="@+id/talentFragment"
+        android:icon="@android:drawable/ic_menu_share"
+        android:title="@string/nav_talent" />
+    <item
+        android:id="@+id/rankFragment"
+        android:icon="@android:drawable/btn_star_big_on"
+        android:title="@string/nav_rank" />
+    <item
+        android:id="@+id/vaultFragment"
+        android:icon="@android:drawable/ic_lock_idle_lock"
+        android:title="@string/nav_vault" />
+</menu>

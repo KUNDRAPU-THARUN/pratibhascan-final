@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/card_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add New Academy Sport"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/et_sport_name_entry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="Sport Name (e.g. Cricket)"
+            android:textColor="@color/white"
+            android:textColorHint="@color/text_tertiary"
+            android:backgroundTint="@color/brand_blue" />
+
+        <Spinner
+            android:id="@+id/sp_sport_category"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_input_field" />
+
+        <EditText
+            android:id="@+id/et_sport_level"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="Training Level (e.g. Pro)"
+            android:textColor="@color/white"
+            android:textColorHint="@color/text_tertiary"
+            android:backgroundTint="@color/brand_blue" />
+
+        <EditText
+            android:id="@+id/et_sport_age_groups"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="Target Age Groups (e.g. U-19)"
+            android:textColor="@color/white"
+            android:textColorHint="@color/text_tertiary"
+            android:backgroundTint="@color/brand_blue" />
+
+        <Spinner
+            android:id="@+id/sp_sport_gender"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_input_field" />
+
+        <EditText
+            android:id="@+id/et_sport_capacity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="Max Athlete Capacity"
+            android:inputType="number"
+            android:textColor="@color/white"
+            android:textColorHint="@color/text_tertiary"
+            android:backgroundTint="@color/brand_blue" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_confirm_add_sport"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="32dp"
+            android:text="SAVE SPORT"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:cornerRadius="12dp"
+            app:backgroundTint="@color/brand_blue" />
+    </LinearLayout>
+</ScrollView>

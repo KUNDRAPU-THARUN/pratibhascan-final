@@ -1,0 +1,23 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+    <!-- TalentRadar Pulse Emblem -->
+    <path
+        android:strokeColor="#3B82F6"
+        android:strokeWidth="2"
+        android:pathData="M50,50m-40,0a40,40 0,1 1,80 0a40,40 0,1 1,-80 0" />
+    <path
+        android:strokeColor="#3B82F6"
+        android:strokeWidth="2"
+        android:pathData="M50,50m-25,0a25,25 0,1 1,50 0a25,25 0,1 1,-50 0" />
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M50,50m-8,0a8,8 0,1 1,16 0a8,8 0,1 1,-16 0" />
+    <!-- Radar Sweep -->
+    <path
+        android:fillColor="#3B82F6"
+        android:fillAlpha="0.3"
+        android:pathData="M50,50 L50,10 A40,40 0,0,1 90,50 Z" />
+</vector>

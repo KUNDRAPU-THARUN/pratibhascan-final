@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark"
+    tools:context=".EditInstitutionProfileActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent">
+        <include layout="@layout/layout_global_header" android:id="@+id/layout_global_header" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EDIT INSTITUTION IDENTITY"
+                android:textColor="@color/brand_blue"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.05" />
+
+            <!-- Core Identity -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/M3CardStyle"
+                android:layout_marginTop="12dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <EditText android:id="@+id/et_edit_inst_name" android:layout_width="match_parent" android:layout_height="50dp" android:background="@drawable/bg_input_field" android:hint="Institution Name" android:paddingHorizontal="16dp" android:textColor="@color/white" />
+                    <EditText android:id="@+id/et_edit_inst_type" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginTop="12dp" android:background="@drawable/bg_input_field" android:hint="Type (e.g. University)" android:paddingHorizontal="16dp" android:textColor="@color/white" />
+                    <EditText android:id="@+id/et_edit_inst_ownership" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginTop="12dp" android:background="@drawable/bg_input_field" android:hint="Ownership (Govt/Private)" android:paddingHorizontal="16dp" android:textColor="@color/white" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="REGISTRATION &amp; AFFILIATION"
+                android:textColor="@color/brand_gold"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/M3CardStyle"
+                android:layout_marginTop="12dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <EditText android:id="@+id/et_edit_reg_no" android:layout_width="match_parent" android:layout_height="50dp" android:background="@drawable/bg_input_field" android:hint="Registration Number" android:paddingHorizontal="16dp" android:textColor="@color/white" />
+                    <EditText android:id="@+id/et_edit_est_year" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginTop="12dp" android:background="@drawable/bg_input_field" android:hint="Established Year" android:paddingHorizontal="16dp" android:textColor="@color/white" android:inputType="number" />
+                    <EditText android:id="@+id/et_edit_board" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginTop="12dp" android:background="@drawable/bg_input_field" android:hint="Affiliated Board" android:paddingHorizontal="16dp" android:textColor="@color/white" />
+                    <EditText android:id="@+id/et_edit_principal" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginTop="12dp" android:background="@drawable/bg_input_field" android:hint="Principal Name" android:paddingHorizontal="16dp" android:textColor="@color/white" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="CONTACT &amp; ADDRESS"
+                android:textColor="@color/brand_green"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/M3CardStyle"
+                android:layout_marginTop="12dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <EditText android:id="@+id/et_edit_phone" android:layout_width="match_parent" android:layout_height="50dp" android:background="@drawable/bg_input_field" android:hint="Official Phone" android:paddingHorizontal="16dp" android:textColor="@color/white" android:inputType="phone" />
+                    <EditText android:id="@+id/et_edit_website" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginTop="12dp" android:background="@drawable/bg_input_field" android:hint="Website" android:paddingHorizontal="16dp" android:textColor="@color/white" />
+                    <EditText android:id="@+id/et_edit_address" android:layout_width="match_parent" android:layout_height="80dp" android:layout_marginTop="12dp" android:background="@drawable/bg_input_field" android:hint="Full Address" android:padding="16dp" android:textColor="@color/white" android:gravity="top" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_save_profile"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="40dp"
+                android:text="SAVE CHANGES"
+                android:textColor="@color/white"
+                app:backgroundTint="@color/brand_blue"
+                app:cornerRadius="12dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

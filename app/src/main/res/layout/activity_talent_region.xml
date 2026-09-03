@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_heatmap_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark">
+
+    <!-- Modern Fragment Container for Google Maps -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/map_container"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Professional Floating Header -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_heatmap_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardBackgroundColor="#CC0F172A"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:layout_constraintTop_toTopOf="parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+            <ImageView
+                android:id="@+id/btn_back_heatmap"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:padding="6dp"
+                android:src="@android:drawable/ic_menu_revert"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Back"
+                app:tint="@color/white" />
+            <TextView
+                android:id="@+id/tv_region_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/district_talent_region"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/btn_info_region"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentEnd="true"
+                android:padding="6dp"
+                android:src="@android:drawable/ic_dialog_info"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Info"
+                app:tint="@color/brand_gold" />
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Professional Map Legend -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_legend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardBackgroundColor="#CC0F172A"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:layout_constraintBottom_toTopOf="@id/chip_live_pulse"
+        app:layout_constraintStart_toStartOf="parent">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TALENT LEVEL"
+                android:textColor="@color/brand_gold"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:gravity="center_vertical" android:layout_marginBottom="4dp">
+                <View android:layout_width="12dp" android:layout_height="12dp" android:background="#3B82F6" android:backgroundTint="#3B82F6" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" Developing (0-39)" android:textColor="@color/white" android:textSize="11sp" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:gravity="center_vertical" android:layout_marginBottom="4dp">
+                <View android:layout_width="12dp" android:layout_height="12dp" android:background="#10B981" android:backgroundTint="#10B981" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" Active (40-69)" android:textColor="@color/white" android:textSize="11sp" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:gravity="center_vertical">
+                <View android:layout_width="12dp" android:layout_height="12dp" android:background="#FBBF24" android:backgroundTint="#FBBF24" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" Strong (70-100)" android:textColor="@color/white" android:textSize="11sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Real-time Data Chip -->
+    <com.google.android.material.chip.Chip
+        android:id="@+id/chip_live_pulse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:text="LIVE PULSE: 2,410 Athletes"
+        app:chipBackgroundColor="@color/brand_gold"
+        android:textColor="#020617"
+        app:chipIcon="@android:drawable/ic_menu_mylocation"
+        app:chipIconTint="#020617"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Map Loading State -->
+    <ProgressBar
+        android:id="@+id/progress_map_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:indeterminateTint="@color/brand_gold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

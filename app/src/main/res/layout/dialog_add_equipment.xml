@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/card_bg">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add New Equipment"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/et_equip_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Equipment Name (e.g. Cricket Bat)"
+        android:textColor="@color/white"
+        android:textColorHint="@color/text_tertiary"
+        android:backgroundTint="@color/brand_blue" />
+
+    <EditText
+        android:id="@+id/et_equip_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="Category (e.g. Cricket)"
+        android:textColor="@color/white"
+        android:textColorHint="@color/text_tertiary"
+        android:backgroundTint="@color/brand_blue" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp">
+        <EditText
+            android:id="@+id/et_equip_quantity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Quantity"
+            android:inputType="number"
+            android:textColor="@color/white"
+            android:textColorHint="@color/text_tertiary"
+            android:backgroundTint="@color/brand_blue" />
+        <View android:layout_width="12dp" android:layout_height="0dp" />
+        <EditText
+            android:id="@+id/et_equip_condition"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Condition"
+            android:textColor="@color/white"
+            android:textColorHint="@color/text_tertiary"
+            android:backgroundTint="@color/brand_blue" />
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_confirm_add_equip"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="32dp"
+        android:text="ADD EQUIPMENT"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:cornerRadius="12dp"
+        app:backgroundTint="@color/brand_blue" />
+
+</LinearLayout>

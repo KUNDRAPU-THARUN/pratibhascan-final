@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_analysis_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F172A">
+
+    <!-- TOP SECTION (60%) - Camera & Ghost -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container_top_camera"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.6"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.camera.view.PreviewView
+            android:id="@+id/view_finder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.example.prathibhascanfinal.OverlayView
+            android:id="@+id/overlay_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/iv_silhouette_guide"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.2"
+            android:src="@drawable/ic_body_silhouette"
+            android:visibility="visible" />
+
+        <!-- Status Overlays -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/analysis_header"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="#88000000"
+            android:elevation="10dp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/btn_analysis_back"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="16dp"
+                android:src="@android:drawable/ic_menu_revert"
+                app:tint="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_analysis_sport_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="General Training"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/btn_switch_camera"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="16dp"
+                android:src="@android:drawable/ic_menu_camera"
+                app:tint="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="Switch Camera" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_visibility_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@drawable/bg_pill_badge"
+            android:backgroundTint="#AA000000"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="6dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/analysis_header">
+            <View
+                android:id="@+id/view_visibility_indicator"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:background="@drawable/bg_circle_red" />
+            <TextView
+                android:id="@+id/tv_visibility_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="DETECTING..."
+                android:textColor="@color/brand_gold"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- BOTTOM SECTION (40%) - Stats & Controls -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll_view_stats"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#1E293B"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/container_top_camera">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Stats Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#0F172A"
+                app:cardCornerRadius="16dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:id="@+id/tv_active_exercise_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SQUATS" android:textColor="@color/brand_gold" android:textSize="12sp" android:textStyle="bold" />
+                        <TextView android:id="@+id/tv_current_set_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:text="SET 1 / 3" android:textColor="@color/brand_blue" android:textSize="11sp" />
+                    </RelativeLayout>
+
+                    <GridLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:columnCount="2">
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="REPS" android:textColor="#94A3B8" android:textSize="10sp" />
+                            <TextView android:id="@+id/tv_rep_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0 / 10" android:textColor="@color/white" android:textSize="22sp" android:textStyle="bold" />
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="PROGRESS" android:textColor="#94A3B8" android:textSize="10sp" />
+                            <TextView android:id="@+id/tv_workout_progress_pct" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0%" android:textColor="@color/brand_green" android:textSize="22sp" android:textStyle="bold" />
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:layout_marginTop="12dp" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SIMILARITY" android:textColor="#94A3B8" android:textSize="10sp" />
+                            <TextView android:id="@+id/tv_similarity_score" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0%" android:textColor="@color/brand_blue" android:textSize="16sp" android:textStyle="bold" />
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:layout_marginTop="12dp" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="CALORIES" android:textColor="#94A3B8" android:textSize="10sp" />
+                            <TextView android:id="@+id/tv_calories" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textColor="#F59E0B" android:textSize="16sp" android:textStyle="bold" />
+                        </LinearLayout>
+                    </GridLayout>
+
+                    <TextView android:id="@+id/tv_live_feedback" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="Align yourself in front of the camera" android:textColor="#94A3B8" android:textSize="13sp" android:textStyle="italic" android:gravity="center" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Ghost Controls -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="GHOST CONTROLS" android:textColor="@color/brand_gold" android:textSize="11sp" android:textStyle="bold" />
+            <SeekBar android:id="@+id/sb_ghost_opacity" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:max="255" android:progress="160" />
+
+            <GridLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:columnCount="2">
+                <com.google.android.material.button.MaterialButton android:id="@+id/btn_pause_analysis" style="@style/Widget.Material3.Button.TonalButton" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:layout_margin="4dp" android:text="Pause" />
+                <com.google.android.material.button.MaterialButton android:id="@+id/btn_resume_analysis" style="@style/Widget.Material3.Button.TonalButton" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:layout_margin="4dp" android:text="Resume" />
+                <com.google.android.material.button.MaterialButton android:id="@+id/btn_split_screen" style="@style/Widget.Material3.Button.TonalButton" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:layout_margin="4dp" android:text="SPLIT" />
+                <com.google.android.material.button.MaterialButton android:id="@+id/btn_debug_mode" style="@style/Widget.Material3.Button.TonalButton" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:layout_margin="4dp" android:text="DEBUG" />
+                <com.google.android.material.button.MaterialButton android:id="@+id/btn_finish_analysis" style="@style/Widget.Material3.Button.TonalButton" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:layout_margin="4dp" android:text="Finish" app:backgroundTint="@color/brand_red" android:textColor="@color/white" />
+            </GridLayout>
+
+            <!-- Exercise Chips -->
+            <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:scrollbars="none">
+                <LinearLayout android:id="@+id/container_exercise_chips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" />
+            </HorizontalScrollView>
+
+            <com.google.android.material.button.MaterialButton android:id="@+id/btn_start_ai_session" android:layout_width="match_parent" android:layout_height="56dp" android:layout_marginTop="20dp" android:text="Start AI Analysis Session" android:textColor="@color/white" app:backgroundTint="@color/brand_blue" app:cornerRadius="12dp" />
+
+            <TextView android:id="@+id/btn_upload_analysis_video" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="Upload Training Video" android:textColor="#94A3B8" android:gravity="center" android:padding="8dp" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

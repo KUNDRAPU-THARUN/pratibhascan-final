@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#020617"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fit India Assessment"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:cardCornerRadius="12dp"
+            app:cardBackgroundColor="#1E293B">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/tv_student_name_fit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select Student"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/sp_student_selection_fit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="@color/white" />
+
+                <EditText
+                    android:id="@+id/et_fit_bmi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:hint="BMI"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#10B981" />
+
+                <EditText
+                    android:id="@+id/et_fit_sprint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="50m Sprint (Seconds)"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#10B981" />
+
+                <EditText
+                    android:id="@+id/et_fit_flexibility"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="Sit and Reach (cm)"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#10B981" />
+
+                <EditText
+                    android:id="@+id/et_fit_strength"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="Push-ups / Sit-ups (Count)"
+                    android:inputType="number"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#10B981" />
+
+                <EditText
+                    android:id="@+id/et_fit_endurance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="600m Run (Seconds)"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#10B981" />
+
+                <Button
+                    android:id="@+id/btn_save_fit_india"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="32dp"
+                    android:text="Save Fit India Data"
+                    android:backgroundTint="#10B981"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</ScrollView>

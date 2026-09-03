@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@color/card_bg">
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="24dp"
+        android:background="#334155" />
+
+    <LinearLayout
+        android:id="@+id/menu_my_profile"
+        style="@style/SettingsItemStyle"
+        android:orientation="horizontal"
+        android:drawableStart="@android:drawable/ic_menu_myplaces">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nav_profile"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/menu_achievements"
+        style="@style/SettingsItemStyle"
+        android:orientation="horizontal"
+        android:drawableStart="@android:drawable/btn_star_big_on">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/achievements"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/menu_history"
+        style="@style/SettingsItemStyle"
+        android:orientation="horizontal"
+        android:drawableStart="@android:drawable/ic_menu_recent_history">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Training History"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <View style="@style/SettingsDividerStyle" />
+
+    <LinearLayout
+        android:id="@+id/menu_settings"
+        style="@style/SettingsItemStyle"
+        android:orientation="horizontal"
+        android:drawableStart="@android:drawable/ic_menu_manage">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/settings"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/menu_privacy"
+        style="@style/SettingsItemStyle"
+        android:orientation="horizontal"
+        android:drawableStart="@android:drawable/ic_lock_idle_lock">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Privacy"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/menu_help"
+        style="@style/SettingsItemStyle"
+        android:orientation="horizontal"
+        android:drawableStart="@android:drawable/ic_menu_help">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Help &amp; About"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <View style="@style/SettingsDividerStyle" />
+
+    <LinearLayout
+        android:id="@+id/menu_logout"
+        style="@style/SettingsItemStyle"
+        android:orientation="horizontal"
+        android:drawableStart="@android:drawable/ic_menu_close_clear_cancel"
+        android:drawableTint="@color/brand_red">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/logout"
+            android:textColor="@color/brand_red"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</LinearLayout>

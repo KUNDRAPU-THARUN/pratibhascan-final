@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/card_bg">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add/Edit Facility"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/et_facility_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Facility Name (e.g. Main Cricket Ground)"
+        android:textColor="@color/white"
+        android:textColorHint="@color/text_tertiary"
+        android:backgroundTint="@color/brand_blue" />
+
+    <EditText
+        android:id="@+id/et_facility_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="Type (e.g. Indoor, Outdoor, Gym)"
+        android:textColor="@color/white"
+        android:textColorHint="@color/text_tertiary"
+        android:backgroundTint="@color/brand_blue" />
+
+    <EditText
+        android:id="@+id/et_facility_sport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="Sport (Primary)"
+        android:textColor="@color/white"
+        android:textColorHint="@color/text_tertiary"
+        android:backgroundTint="@color/brand_blue" />
+
+    <EditText
+        android:id="@+id/et_facility_capacity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="Capacity"
+        android:inputType="number"
+        android:textColor="@color/white"
+        android:textColorHint="@color/text_tertiary"
+        android:backgroundTint="@color/brand_blue" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_confirm_add_facility"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="32dp"
+        android:text="SAVE FACILITY"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:cornerRadius="12dp"
+        app:backgroundTint="@color/brand_blue" />
+
+</LinearLayout>

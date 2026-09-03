@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sport_dashboard_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark">
+
+    <!-- Shared Global Header -->
+    <include
+        layout="@layout/layout_global_header"
+        android:id="@+id/layout_global_header"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/sport_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_global_header">
+
+        <LinearLayout
+            android:id="@+id/sport_scroll_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:paddingBottom="40dp">
+
+            <!-- LARGE SPORT BANNER -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="8dp"
+                app:strokeWidth="0dp"
+                app:cardBackgroundColor="@color/card_bg_light">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                    <ImageView
+                        android:id="@+id/iv_arena_banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@android:drawable/ic_menu_gallery"
+                        android:alpha="0.4"
+                        android:contentDescription="Banner" />
+
+                    <View android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/bg_module_item_gradient" android:alpha="0.6" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_margin="20dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/tv_arena_sport_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="CRICKET"
+                            android:textColor="@color/white"
+                            android:textSize="32sp"
+                            android:textStyle="bold"
+                            android:letterSpacing="0.1" />
+                        <TextView
+                            android:id="@+id/tv_current_skill"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Skill: Cover Drive"
+                            android:textColor="@color/brand_gold"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!-- BADGES -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="16dp"
+                        android:orientation="horizontal">
+                        <TextView android:id="@+id/badge_ai" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/bg_pill_badge" android:paddingHorizontal="10dp" android:paddingVertical="4dp" android:text="AI COACH" android:textColor="@color/background_dark" android:textSize="9sp" android:textStyle="bold" android:backgroundTint="@color/brand_gold" />
+                        <TextView android:id="@+id/badge_ar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:background="@drawable/bg_pill_badge" android:paddingHorizontal="10dp" android:paddingVertical="4dp" android:text="AR GHOST" android:textColor="@color/white" android:textSize="9sp" android:textStyle="bold" android:backgroundTint="@color/brand_blue" />
+                        <TextView android:id="@+id/badge_cam" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:background="@drawable/bg_pill_badge" android:paddingHorizontal="10dp" android:paddingVertical="4dp" android:text="LIVE CAM" android:textColor="@color/white" android:textSize="9sp" android:textStyle="bold" android:backgroundTint="@color/brand_green" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- PROGRESS & SCORE -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    app:cardBackgroundColor="@color/card_bg_light"
+                    app:cardCornerRadius="16dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TRAINING PROGRESS" android:textColor="@color/text_secondary" android:textSize="10sp" android:textStyle="bold" />
+                        <ProgressBar android:id="@+id/pb_training" style="?android:attr/progressBarStyleHorizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:progress="65" android:progressTint="@color/brand_blue" />
+                        <TextView android:id="@+id/tv_progress_pct" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="65% Mastery" android:textColor="@color/white" android:textSize="12sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    app:cardBackgroundColor="@color/card_bg_light"
+                    app:cardCornerRadius="16dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp" android:orientation="vertical" android:gravity="center">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TODAY'S SCORE" android:textColor="@color/text_secondary" android:textSize="10sp" android:textStyle="bold" />
+                        <TextView android:id="@+id/tv_today_score" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="842" android:textColor="@color/brand_gold" android:textSize="24sp" android:textStyle="bold" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <!-- CORE ACTIONS -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="Pro Training Sandbox" android:textColor="@color/white" android:textSize="16sp" android:textStyle="bold" />
+
+            <GridLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:columnCount="2" android:alignmentMode="alignMargins">
+                <LinearLayout android:id="@+id/btn_launch_ai_coach" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:layout_margin="6dp" android:background="@drawable/bg_feature_item_button" android:orientation="vertical" android:padding="16dp" android:clickable="true" android:focusable="true">
+                    <ImageView android:layout_width="32dp" android:layout_height="32dp" android:src="@android:drawable/ic_btn_speak_now" app:tint="@color/brand_gold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Start AI Coaching" android:textColor="@color/white" android:textSize="13sp" android:textStyle="bold" />
+                </LinearLayout>
+                <LinearLayout android:id="@+id/btn_launch_ar_ghost" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:layout_margin="6dp" android:background="@drawable/bg_feature_item_button" android:orientation="vertical" android:padding="16dp" android:clickable="true" android:focusable="true">
+                    <ImageView android:layout_width="32dp" android:layout_height="32dp" android:src="@android:drawable/ic_menu_view" app:tint="@color/brand_blue" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Launch AR Ghost" android:textColor="@color/white" android:textSize="13sp" android:textStyle="bold" />
+                </LinearLayout>
+                <LinearLayout android:id="@+id/btn_open_live_cam" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:layout_margin="6dp" android:background="@drawable/bg_feature_item_button" android:orientation="vertical" android:padding="16dp" android:clickable="true" android:focusable="true">
+                    <ImageView android:layout_width="32dp" android:layout_height="32dp" android:src="@android:drawable/ic_menu_camera" app:tint="@color/brand_green" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Live AI Analysis" android:textColor="@color/white" android:textSize="13sp" android:textStyle="bold" />
+                </LinearLayout>
+                <LinearLayout android:id="@+id/btn_arena_upload_video" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:layout_margin="6dp" android:background="@drawable/bg_feature_item_button" android:orientation="vertical" android:padding="16dp" android:clickable="true" android:focusable="true">
+                    <ImageView android:layout_width="32dp" android:layout_height="32dp" android:src="@android:drawable/ic_menu_upload" app:tint="@color/brand_purple" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Upload Match" android:textColor="@color/white" android:textSize="13sp" android:textStyle="bold" />
+                </LinearLayout>
+            </GridLayout>
+
+            <!-- SPORT MODULES / SKILLS -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="Skill Modules" android:textColor="@color/white" android:textSize="16sp" android:textStyle="bold" />
+            <LinearLayout android:id="@+id/container_sport_modules" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:orientation="vertical" />
+
+            <!-- ADDITIONAL BLOCKS -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="Performance &amp; History" android:textColor="@color/white" android:textSize="16sp" android:textStyle="bold" />
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:cardBackgroundColor="@color/card_bg_light"
+                app:cardCornerRadius="16dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/button_border">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+                    <TextView android:id="@+id/btn_arena_history" style="@style/AnalysisItemStyle" android:text="Training History" android:drawableStart="@android:drawable/ic_menu_recent_history" android:drawablePadding="16dp" android:gravity="center_vertical" android:padding="16dp" android:textColor="@color/white" />
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/button_border" />
+                    <TextView android:id="@+id/btn_arena_reports" style="@style/AnalysisItemStyle" android:text="Performance Reports" android:drawableStart="@android:drawable/ic_menu_sort_by_size" android:drawablePadding="16dp" android:gravity="center_vertical" android:padding="16dp" android:textColor="@color/white" />
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/button_border" />
+                    <TextView android:id="@+id/btn_arena_achievements" style="@style/AnalysisItemStyle" android:text="Achievements" android:drawableStart="@android:drawable/btn_star_big_on" android:drawablePadding="16dp" android:gravity="center_vertical" android:padding="16dp" android:textColor="@color/white" />
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/button_border" />
+                    <TextView android:id="@+id/btn_arena_leaderboard" style="@style/AnalysisItemStyle" android:text="Leaderboard" android:drawableStart="@android:drawable/ic_menu_share" android:drawablePadding="16dp" android:gravity="center_vertical" android:padding="16dp" android:textColor="@color/white" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

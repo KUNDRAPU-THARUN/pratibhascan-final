@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <group
+        android:translateX="30"
+        android:translateY="30"
+        android:scaleX="2.0"
+        android:scaleY="2.0">
+        <!-- Scanner Corners -->
+        <path
+            android:strokeColor="#3B82F6"
+            android:strokeWidth="2"
+            android:strokeLineCap="round"
+            android:pathData="M4,9V5C4,4.45 4.45,4 5,4H9" />
+        <path
+            android:strokeColor="#3B82F6"
+            android:strokeWidth="2"
+            android:strokeLineCap="round"
+            android:pathData="M15,4H19C19.55,4 20,4.45 20,5V9" />
+        <path
+            android:strokeColor="#3B82F6"
+            android:strokeWidth="2"
+            android:strokeLineCap="round"
+            android:pathData="M4,15V19C4,19.55 4.45,20 5,20H9" />
+        <path
+            android:strokeColor="#3B82F6"
+            android:strokeWidth="2"
+            android:strokeLineCap="round"
+            android:pathData="M15,20H19C19.55,20 20,19.55 20,19V15" />
+
+        <!-- Star -->
+        <path
+            android:fillColor="#FBBF24"
+            android:pathData="M12,15.27L16.18,18L14.54,12.97L19,9.24L13.81,8.63L12,4L10.19,8.63L5,9.24L9.46,12.97L7.82,18L12,15.27Z" />
+    </group>
+</vector>

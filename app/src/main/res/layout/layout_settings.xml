@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:paddingBottom="100dp"
+        android:clipToPadding="false">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_title"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Group 1: User Account & Profile -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/set_cat_account"
+            android:textColor="@color/brand_blue"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textAllCaps="true" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:cardBackgroundColor="@color/card_bg_light"
+            app:cardCornerRadius="16dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/button_border">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/btn_set_edit_profile"
+                    style="@style/SettingsItemStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/set_edit_info"
+                    android:textColor="@color/white"
+                    app:drawableStartCompat="@android:drawable/ic_menu_myplaces"
+                    app:drawableTint="@color/white"
+                    android:drawablePadding="16dp" />
+
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/button_border" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/set_contact"
+                    android:textColor="@color/white"
+                    app:drawableStartCompat="@android:drawable/ic_dialog_email"
+                    app:drawableTint="@color/white"
+                    android:drawablePadding="16dp" />
+
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/button_border" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/set_change_password"
+                    android:textColor="@color/white"
+                    app:drawableStartCompat="@android:drawable/ic_lock_idle_lock"
+                    app:drawableTint="@color/white"
+                    android:drawablePadding="16dp" />
+
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/button_border" />
+
+                <TextView
+                    android:id="@+id/btn_set_language"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/settings_language"
+                    android:textColor="@color/white"
+                    app:drawableStartCompat="@android:drawable/ic_menu_sort_alphabetically"
+                    app:drawableTint="@color/white"
+                    android:drawablePadding="16dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Group 2: Sport & AI Settings -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/set_cat_sport"
+            android:textColor="@color/brand_blue"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textAllCaps="true" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:cardBackgroundColor="@color/card_bg_light"
+            app:cardCornerRadius="16dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/button_border">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/set_primary_focus"
+                    android:textColor="@color/white"
+                    app:drawableStartCompat="@android:drawable/ic_menu_edit"
+                    app:drawableTint="@color/white"
+                    android:drawablePadding="16dp" />
+
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/button_border" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/set_skeletal_overlay"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:drawablePadding="16dp"
+                        app:drawableStartCompat="@android:drawable/ic_menu_view"
+                        app:drawableTint="@color/white" />
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:checked="true" />
+                </RelativeLayout>
+
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/button_border" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/set_cam_calibration"
+                    android:textColor="@color/white"
+                    app:drawableStartCompat="@android:drawable/ic_menu_camera"
+                    app:drawableTint="@color/white"
+                    android:drawablePadding="16dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Group 3: Privacy & Data -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/set_cat_privacy"
+            android:textColor="@color/brand_blue"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textAllCaps="true" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:cardBackgroundColor="@color/card_bg_light"
+            app:cardCornerRadius="16dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/button_border">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/set_profile_visibility"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:drawablePadding="16dp"
+                        app:drawableStartCompat="@android:drawable/ic_menu_view"
+                        app:drawableTint="@color/white" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:text="Public"
+                        android:textColor="@color/brand_blue"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/button_border" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Discovery Participation"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:drawablePadding="16dp"
+                        app:drawableStartCompat="@android:drawable/ic_menu_share"
+                        app:drawableTint="@color/white" />
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/switch_discovery_opt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:checked="true" />
+                </RelativeLayout>
+
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/button_border" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/set_scout_requests"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:drawablePadding="16dp"
+                        app:drawableStartCompat="@android:drawable/ic_menu_send"
+                        app:drawableTint="@color/white" />
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/switch_scout_requests"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:checked="true" />
+                </RelativeLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Group 4: Support & Logout -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            app:cardBackgroundColor="@color/card_bg_light"
+            app:cardCornerRadius="16dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/button_border">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/set_help"
+                    android:textColor="@color/white"
+                    app:drawableStartCompat="@android:drawable/ic_menu_help"
+                    app:drawableTint="@color/white"
+                    android:drawablePadding="16dp" />
+
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/button_border" />
+
+                <TextView
+                    android:id="@+id/btn_logout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/logout"
+                    android:textColor="@color/brand_red"
+                    app:drawableStartCompat="@android:drawable/ic_lock_power_off"
+                    app:drawableTint="@color/brand_red"
+                    android:drawablePadding="16dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="32dp"
+            android:text="@string/app_version_info"
+            android:textColor="@color/text_tertiary"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+</ScrollView>

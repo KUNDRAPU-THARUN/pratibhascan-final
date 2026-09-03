@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#020617"
+    android:fitsSystemWindows="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Institutional Registration"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Link your School or College to the National Board Exam ecosystem."
+                android:textColor="#94A3B8"
+                android:textSize="14sp" />
+
+            <!-- Step 1: Profile -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/bg_dashboard_card"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Institutional Profile" android:textColor="@color/brand_blue" android:textSize="14sp" android:textStyle="bold" />
+
+                <EditText android:id="@+id/et_inst_name" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginTop="16dp" android:background="@drawable/bg_input_field" android:hint="School/College Name" android:paddingHorizontal="16dp" android:textColor="@color/white" android:inputType="textCapWords" />
+
+                <EditText android:id="@+id/et_inst_board" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginTop="12dp" android:background="@drawable/bg_input_field" android:hint="Board (CBSE, ICSE, State, etc.)" android:paddingHorizontal="16dp" android:textColor="@color/white" />
+
+                <EditText android:id="@+id/et_inst_code" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginTop="12dp" android:background="@drawable/bg_input_field" android:hint="Affiliation Code / Reg No." android:paddingHorizontal="16dp" android:textColor="@color/white" android:inputType="textCapCharacters" />
+
+                <EditText android:id="@+id/et_inst_address" android:layout_width="match_parent" android:layout_height="80dp" android:layout_marginTop="12dp" android:background="@drawable/bg_input_field" android:hint="Campus Full Address" android:padding="16dp" android:textColor="@color/white" android:gravity="top" android:inputType="textMultiLine" />
+            </LinearLayout>
+
+            <!-- Step 2: Authorized Personnel -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_dashboard_card"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Authorized Personnel" android:textColor="@color/brand_blue" android:textSize="14sp" android:textStyle="bold" />
+
+                <EditText android:id="@+id/et_inst_principal" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginTop="16dp" android:background="@drawable/bg_input_field" android:hint="Principal Name" android:paddingHorizontal="16dp" android:textColor="@color/white" android:inputType="textCapWords" />
+
+                <EditText android:id="@+id/et_inst_pe_teacher" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginTop="12dp" android:background="@drawable/bg_input_field" android:hint="Lead PE Teacher Name" android:paddingHorizontal="16dp" android:textColor="@color/white" android:inputType="textCapWords" />
+
+                <EditText android:id="@+id/et_inst_phone" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginTop="12dp" android:background="@drawable/bg_input_field" android:hint="Admin Mobile (OTP Verified)" android:paddingHorizontal="16dp" android:textColor="@color/white" android:inputType="phone" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_register_institution"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="32dp"
+                android:backgroundTint="@color/brand_blue"
+                android:text="Register Institution"
+                android:textStyle="bold"
+                app:cornerRadius="12dp" />
+
+            <TextView
+                android:id="@+id/btn_cancel_inst"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="32dp"
+                android:text="← Cancel"
+                android:textColor="#94A3B8"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,657 @@
+<resources>
+    <string name="app_name">PratibhaScan</string>
+    <string name="brand_name_part1">Pratibha</string>
+    <string name="brand_name_part2">Scan</string>
+    <string name="brand_subtitle">AI-Powered Talent Assessment</string>
+    <string name="login_signup">Login / Sign Up</string>
+    <string name="ai_powered_badge">AI-Powered Sports Assessment</string>
+    <string name="democratize">Democratize</string>
+    <string name="sports">Sports</string>
+    <string name="talent">Talent</string>
+    <string name="assessment">Assessment</string>
+    <string name="main_description">Upload your performance videos and get instant AI-powered analysis.\nConnect with scouts, track progress, and unlock your athletic potential.</string>
+    <string name="btn_get_started_free">Get Started Free</string>
+    <string name="btn_im_a_scout">I\'m a Scout</string>
+    <string name="nav_home">My Arena</string>
+    <string name="nav_talent">Talent Pool</string>
+    <string name="nav_rank">Leaderboard</string>
+    <string name="nav_vault">The Vault</string>
+
+    <string name="title_arena">My Training Arena</string>
+    <string name="title_talent_pool">Ecosystem Marketplace</string>
+    <string name="title_leaderboard">National Rankings</string>
+    <string name="title_vault">Verified Scorecards &amp; PDFs</string>
+
+    <string name="nav_analyze">Analyze</string>
+    <string name="nav_connect">Connect</string>
+    <string name="nav_profile">Profile</string>
+    <string name="logo_desc">App Logo</string>
+    <string name="search_desc">Search</string>
+    <string name="full_name">Full Name</string>
+    <string name="age">Age</string>
+    <string name="location">Location</string>
+    <string name="bio">Bio (Optional)</string>
+    <string name="create_account">Create Account</string>
+    <string name="login">Login</string>
+    <string name="signup">Sign Up</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="i_am_a">I am a...</string>
+    <string name="athlete">Athlete</string>
+    <string name="academy">Sports Academy</string>
+    <string name="institution">Educational Inst.</string>
+    <string name="scout">Scout / Recruiter</string>
+    <string name="role_athlete">Athlete</string>
+    <string name="role_academy">Academy</string>
+    <string name="role_institution">Institution</string>
+    <string name="back_to_home">← Back to Home</string>
+
+    <string name="welcome_user">Welcome, %1$s !</string>
+    <string name="good_morning" translatable="false">Good Morning, %1$s!</string>
+    <string name="good_afternoon" translatable="false">Good Afternoon, %1$s!</string>
+    <string name="good_evening" translatable="false">Good Evening, %1$s!</string>
+    <string name="good_night" translatable="false">Good Night, %1$s!</string>
+    <string name="weather_format" translatable="false">%1$d°C %2$s</string>
+    <string name="aqi_uv_format" translatable="false">AQI: %1$d | UV: %2$.1f</string>
+    <string name="weather_unavailable" translatable="false">Weather unavailable</string>
+    <string name="location_unavailable" translatable="false">Location unavailable</string>
+    <string name="retry" translatable="false">Retry</string>
+    <string name="aqi_label" translatable="false">AQI: %1$d</string>
+    <string name="uv_label" translatable="false">UV: %1$.1f</string>
+    <string name="humidity_format" translatable="false">Hum: %1$d%%</string>
+    <string name="wind_format" translatable="false">Wind: %1$.1f km/h</string>
+    <string name="rain_format" translatable="false">Rain: %1$d%%</string>
+    <string name="athlete_profile">Athlete Profile</string>
+    <string name="athlete_profile_subtitle" translatable="false">%1$s Athlete Profile</string>
+    <string name="blockchain_passport">BLOCKCHAIN PASSPORT</string>
+    <string name="blockchain_verified_id">Blockchain Verified ID</string>
+    <string name="technical_score">Technical Score</string>
+    <string name="injury_risk">Injury Risk</string>
+    <string name="pro_form_alignment">Pro-Form Alignment</string>
+    <string name="sport_specific_ai">Sport-Specific AI Modules</string>
+    <string name="real_time_ai">Real-time AI Feedback &amp; Anti-Cheat</string>
+    <string name="impact_national_rank">Impact &amp; National Rank</string>
+    <string name="technical_score_placeholder" translatable="false">84.2</string>
+    <string name="national">National</string>
+    <string name="global">Global</string>
+    <string name="rank_placeholder" translatable="false">#142</string>
+    <string name="rank_placeholder_alt" translatable="false">#2109</string>
+    <string name="state_leaderboard">State Leaderboard</string>
+    <string name="district_talent_region">District Talent Region</string>
+    <string name="settings">Settings</string>
+    <string name="logout">Logout</string>
+
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="other">Other</string>
+
+    <string name="cat_indoor">Indoor Games</string>
+    <string name="cat_outdoor">Outdoor Games</string>
+    <string name="cat_athletics">Athletics</string>
+    <string name="cat_specialty">Other Sports</string>
+
+    <string name="sport_cricket">Cricket</string>
+    <string name="sport_football">Football</string>
+    <string name="sport_hockey">Hockey</string>
+    <string name="sport_kabaddi">Kabaddi</string>
+    <string name="sport_badminton">Badminton</string>
+    <string name="sport_chess">Chess</string>
+    <string name="sport_wrestling">Wrestling</string>
+    <string name="sport_table_tennis">Table Tennis</string>
+    <string name="sport_tennis">Tennis</string>
+    <string name="sport_basketball">Basketball</string>
+    <string name="sport_volleyball">Volleyball</string>
+    <string name="sport_archery">Archery</string>
+    <string name="sport_sprints">Sprints</string>
+    <string name="sport_javelin">Javelin</string>
+    <string name="sport_long_jump">Long Jump</string>
+    <string name="sport_boxing">Boxing</string>
+    <string name="sport_kho_kho">Kho-Kho</string>
+    <string name="sport_shooting">Shooting</string>
+    <string name="sport_billiards">Billiards / Snooker</string>
+    <string name="sport_carrom">Carrom</string>
+    <string name="sport_squash">Squash</string>
+    <string name="sport_golf">Golf</string>
+    <string name="sport_hurdles">Hurdles</string>
+    <string name="sport_running">Long Distance Running</string>
+    <string name="sport_shot_put">Shot Put</string>
+    <string name="sport_discus">Discus Throw</string>
+    <string name="sport_high_jump">High Jump</string>
+    <string name="sport_triple_jump">Triple Jump</string>
+    <string name="sport_race_walking">Race Walking</string>
+    <string name="sport_yoga">Yoga</string>
+    <string name="sport_swimming">Swimming</string>
+    <string name="sport_cycling">Cycling</string>
+    <string name="sport_mallakhamba">Mallakhamba</string>
+    <string name="sport_karate">Karate / Taekwondo</string>
+    <string name="sport_fencing">Fencing</string>
+    <string name="sport_rugby">Rugby</string>
+    <string name="sport_rowing">Rowing</string>
+    <string name="sport_pole_vault">Pole Vault</string>
+    <string name="sport_hammer_throw">Hammer Throw</string>
+    <string name="sport_weightlifting">Weightlifting</string>
+    <string name="sport_pilates">Pilates</string>
+    <string name="sport_gymnastics">Gymnastics</string>
+
+    <string name="hint_full_name">John Doe</string>
+    <string name="hint_email">you@example.com</string>
+    <string name="hint_password">........</string>
+    <string name="desc_toggle_password">Toggle Password Visibility</string>
+    <string name="hint_age" translatable="false">25</string>
+    <string name="hint_city">City</string>
+    <string name="hint_bio">Tell us about yourself...</string>
+
+    <string name="step_title_identity">Basic Identity</string>
+    <string name="step_desc_identity">Let\'s start with who you are.</string>
+    <string name="dob">Date of Birth</string>
+    <string name="hint_dob" translatable="false">DD/MM/YYYY</string>
+    <string name="hint_location">City, State</string>
+
+    <string name="step_title_vitals">Physical Vitals</string>
+    <string name="step_desc_vitals">Tell us about your athlete build.</string>
+    <string name="height_cm">Height (cm)</string>
+    <string name="weight_kg">Weight (kg)</string>
+    <string name="blood_group_opt">Blood Group (Optional)</string>
+
+    <string name="step_title_sport">Sport Selection</string>
+    <string name="step_desc_sport">What\'s your primary discipline?</string>
+    <string name="primary_discipline">Primary Discipline</string>
+    <string name="sub_sport">Sub-Sport</string>
+    <string name="experience_level">Experience Level</string>
+
+    <string name="step_title_performance">Technical Performance</string>
+    <string name="step_desc_performance">Enter your stats and records.</string>
+    <string name="personal_best">Personal Best</string>
+    <string name="top_speed">Top Speed</string>
+
+    <string name="step_title_media">Media &amp; Proof</string>
+    <string name="step_desc_media">Provide evidence of your talent.</string>
+    <string name="achievements">Achievements</string>
+    <string name="hint_achievements">List your medals, trophies...</string>
+    <string name="btn_upload_highlight">Upload Highlight Reel (30s)</string>
+    <string name="btn_upload_certificates">Upload Certificates</string>
+
+    <string name="back">Back</string>
+    <string name="next">Next</string>
+    <string name="complete_profile">Complete Profile</string>
+
+    <string name="btn_edit_profile">EDIT PROFILE</string>
+    <string name="verified_athlete">VERIFIED ATHLETE</string>
+    <string name="stat_height">HEIGHT</string>
+    <string name="stat_top_speed">TOP SPEED</string>
+    <string name="stat_experience">EXPERIENCE</string>
+    <string name="stat_age">AGE</string>
+    <string name="ai_performance_analysis">AI Performance Analysis</string>
+    <string name="desc_spider_chart">Spider Chart Placeholder</string>
+    <string name="stamina">STAMINA</string>
+    <string name="agility">AGILITY</string>
+    <string name="form">FORM</string>
+    <string name="perf_details_achievements">Performance Details &amp; Achievements</string>
+    <string name="label_personal_best">Personal Best: %1$s</string>
+    <string name="label_top_speed">Top Speed: %1$s</string>
+    <string name="label_flexibility">Flexibility: %1$s/10</string>
+    <string name="label_balance">Balance: %1$s</string>
+    <string name="label_hand_foot">Hand/Foot: %1$s</string>
+    <string name="label_matches">Matches: %1$s</string>
+    <string name="no_achievements">No achievements listed yet.</string>
+    <string name="btn_upload_training_video">Upload Training Video</string>
+    <string name="no_video_selected">No video selected</string>
+    <string name="video_selected">Video selected: %1$s</string>
+    <string name="desc_cert_preview">Certificate Preview</string>
+
+    <string name="perf_label_pb">Personal Best (PB) Time</string>
+    <string name="perf_label_top_speed">Top Speed Achieved</string>
+    <string name="perf_label_flexibility">Flexibility Score (1-10)</string>
+    <string name="perf_label_balance">Balance Holding Time</string>
+    <string name="perf_label_hand_foot">Preferred Hand/Foot</string>
+    <string name="perf_label_matches">Match Experience (Total played)</string>
+    <string name="rank_label">Rank: #%1$d</string>
+    <string name="perf_status_label">Performance: %1$s</string>
+    <string name="status_elite">Elite</string>
+    <string name="status_advanced">Advanced</string>
+    <string name="status_intermediate">Intermediate</string>
+    <string name="status_rising">Rising Talent</string>
+
+    <string name="cat_academy">Academy Profile &amp; Registration</string>
+    <string name="cat_coach">Coach Entry Interface</string>
+    <string name="cat_discovery_map">Talent Discovery Map</string>
+    <string name="academy_reg">Academy Registration</string>
+    <string name="coach_entry">Direct Coach Entry Interface</string>
+    <string name="bulk_onboarding">Bulk Player Onboarding (QR/Excel)</string>
+    <string name="roster_management">Academy Roster Management</string>
+
+    <string name="title_academy_registration">Academy Registration</string>
+    <string name="academy_info_section">Official Information</string>
+    <string name="head_coach_name">Head Coach Name</string>
+    <string name="reg_number">Registration Number (Official)</string>
+    <string name="contact_phone">Contact Phone</string>
+    <string name="sports_offered">Sports Offered (e.g. Cricket, Football)</string>
+    <string name="infrastructure">Infrastructure Details (Grounds, Gym, etc.)</string>
+    <string name="submit_registration">Register Academy</string>
+    <string name="academy_success">Academy registration submitted for verification!</string>
+
+    <string name="title_coach_portfolio">Professional Coach Portfolio</string>
+    <string name="coach_tech_skills">Biomechanical Tech Proficiency</string>
+    <string name="coach_availability">Available for Opportunities</string>
+    <string name="coach_license_upload">Upload Coaching Credentials</string>
+    <string name="coach_video_portfolio">Drill &amp; Analysis Showcase</string>
+    <string name="btn_save_portfolio">Publish Portfolio</string>
+    <string name="status_looking">OPEN FOR HIRING</string>
+    <string name="status_employed">CURRENTLY EMPLOYED</string>
+    <string name="tech_swingvision">SwingVision / HomeCourt</string>
+    <string name="tech_dartfish">Dartfish / Kinovea</string>
+    <string name="tech_iot">Wearable IoT Sensors</string>
+    <string name="tech_motion_cap">3D Motion Capture</string>
+    <string name="hint_head_coach">Coach Name</string>
+    <string name="hint_reg_no" translatable="false">CERT-XXXX-2024</string>
+    <string name="hint_infrastructure">Describe your facilities...</string>
+
+    <string name="title_discovery_block">Ecosystem Discovery &amp; Entry</string>
+    <string name="academy_locator">Integrated Academy Locator</string>
+
+    <string name="title_radar">TalentRadar AI: Hyper-Local Proximity</string>
+    <string name="radar_desc">Connecting top athletes to nearby academies via GPS</string>
+    <string name="btn_activate_radar">Activate Radar Mode</string>
+    <string name="talent_flash">⚡ LOCAL TALENT FLASH!</string>
+    <string name="radar_5km">5km Radius (Immediate)</string>
+    <string name="radar_25km">25km Radius (District)</string>
+    <string name="entry_benchmark">Academy Entry Benchmark</string>
+    <string name="drop_trial_invite">Drop a Trial Invite</string>
+    <string name="neighborhood_challenge">Neighborhood Challenge</string>
+    <string name="sponsor_gear">Sponsor Athlete Gear</string>
+    <string name="talent_hotspots">Regional Talent Regions</string>
+    <string name="map_filters">Filter by Sport &amp; Region</string>
+    <string name="live_directions">Live Facility Directions</string>
+
+    <string name="cat_school">School &amp; Board (CBSE/ICSE)</string>
+    <string name="pe_practical">PE Practical Exam Mode</string>
+    <string name="digital_portfolio">Digital Record File (PDF)</string>
+    <string name="ai_skill_test">AI Skill Test (15 Marks)</string>
+    <string name="viva_prep">Viva Prep &amp; Quizzes</string>
+
+    <string name="cat_fit_india">Fit India Battery Tests</string>
+    <string name="fit_bmi">BMI &amp; Composition</string>
+    <string name="fit_dash">50m Dash (Speed)</string>
+    <string name="fit_endurance">600m Run (Endurance)</string>
+    <string name="fit_flex">Sit &amp; Reach</string>
+    <string name="fit_strength">Partial Curl-up &amp; Push-ups</string>
+
+    <string name="cat_portals">Specialized Entry Portals</string>
+    <string name="portal_coach">Coach / PE Teacher Portal</string>
+    <string name="portal_student">Student Pro-Card &amp; Quests</string>
+    <string name="portal_parent">Parent / Guardian Portal</string>
+    <string name="portal_admin">School Admin Report</string>
+
+    <string name="cat_security">Security &amp; Integrity Layer</string>
+    <string name="sec_env">Environment Verification</string>
+    <string name="sec_gps">Timestamped GPS Metadata</string>
+
+    <string name="title_athletic_domain">Athletics AI Domain</string>
+    <string name="title_inst_ecosystem" translatable="false">Institutional &amp; Analytics Ecosystem</string>
+    <string name="title_academic_integration">Academic &amp; Institutional Integration</string>
+    <string name="title_entry_portals">Specialized Entry Portals</string>
+
+    <string name="settings_title">Settings</string>
+    <string name="set_cat_account">User Account &amp; Profile</string>
+    <string name="set_edit_info">Edit Personal Info</string>
+    <string name="set_contact">Contact Details</string>
+    <string name="set_verification">Account Verification</string>
+    <string name="set_change_password">Change Password</string>
+    <string name="set_linked_accounts">Linked Accounts</string>
+    <string name="set_cat_sport">Sport &amp; Activity Preferences</string>
+    <string name="set_primary_focus">Primary Sport Focus</string>
+    <string name="set_units">Measurement Units</string>
+    <string name="set_exp_level">Experience Level</string>
+    <string name="set_pref_hand_foot">Preferred Hand/Foot</string>
+    <string name="set_cat_ai">AI &amp; Assessment Configuration</string>
+    <string name="set_cam_calibration">Camera Calibration</string>
+    <string name="set_sensitivity">Assessment Sensitivity</string>
+    <string name="set_video_quality">Video Quality</string>
+    <string name="set_frame_rate">Frame Rate (FPS)</string>
+    <string name="set_skeletal_overlay">Skeletal Overlay</string>
+    <string name="set_cat_privacy">Privacy &amp; Scouting Visibility</string>
+    <string name="set_profile_visibility">Profile Visibility</string>
+    <string name="set_data_sharing">Data Sharing</string>
+    <string name="set_scout_requests">Allow Scout Requests</string>
+    <string name="set_hide_location">Hide Location</string>
+    <string name="set_cat_health">Health &amp; Synchronization</string>
+    <string name="set_health_sync">Health App Sync (Fit/Health)</string>
+    <string name="set_limitations">Physical Limitations</string>
+    <string name="set_emergency">Emergency Contact</string>
+    <string name="set_cat_notifications">Notifications</string>
+    <string name="set_push_notif">Push Notifications</string>
+    <string name="set_reminders">Assessment Reminders</string>
+    <string name="set_email_reports">Email Reports</string>
+    <string name="set_cat_support">App &amp; Technical Support</string>
+    <string name="set_offline_mode">Offline Mode</string>
+    <string name="set_clear_cache">Clear Cache</string>
+    <string name="set_help">Help Center &amp; Tutorials</string>
+    <string name="set_legal">Terms &amp; Privacy Policy</string>
+    <string name="set_version">App Version</string>
+    <string name="set_delete_account">Delete Account</string>
+
+    <string name="title_academy_setup">Academy Infrastructure Setup</string>
+    <string name="title_institution_setup">Educational Institution Setup</string>
+    <string name="label_infra_details">Infrastructure Details</string>
+    <string name="label_target_metrics">Primary Metrics of Interest</string>
+    <string name="label_board_affiliation">Board Affiliation</string>
+    <string name="label_principal_name">Principal Full Name</string>
+    <string name="label_pe_teacher">Lead PE Teacher</string>
+    <string name="title_performance_analytics">ANALYTICS &amp; INTEGRITY</string>
+    <string name="label_live_pulse">LIVE PULSE</string>
+    <string name="ai_pose_accuracy">Pose Accuracy: 92%\nFeedback: Active</string>
+    <string name="anti_cheat_system">Anti-Cheat System</string>
+    <string name="verified_status">VERIFIED</string>
+    <string name="label_language_default">English ▾</string>
+    <string name="title_active_games">ACTIVE SPORTS ARENAS</string>
+    <string name="btn_ar_ghost_view">AR GHOST VIEW</string>
+    <string name="btn_ai_coach_chat">AI COACH CHAT</string>
+    <string name="btn_ar_guidance">AR GUIDANCE</string>
+
+    <string name="settings_language">Language</string>
+    <string name="select_language">Select Language</string>
+    <string name="lang_en">English</string>
+    <string name="lang_hi">Hindi (हिन्दी)</string>
+    <string name="lang_te">Telugu (తెలుగు)</string>
+    <string name="lang_ta">Tamil (தமிழ்)</string>
+    <string name="lang_kn">Kannada (ಕನ್ನಡ)</string>
+    <string name="lang_ml">Malayalam (മലയാളം)</string>
+    <string name="lang_mr">Marathi (मराठी)</string>
+    <string name="lang_bn">Bengali (বাংলা)</string>
+    <string name="lang_gu">Gujarati (ગુજરાતી)</string>
+    <string name="lang_pa">Punjabi (ਪੰਜਾਬੀ)</string>
+    <string name="lang_or">Odia (ଓଡ଼ିଆ)</string>
+    <string name="toast_language_changed">Language changed successfully</string>
+    <string name="error_email_password_required">Email and password are required</string>
+    <string name="error_login_failed">Login failed. Check your details.</string>
+    <string name="error_no_internet" translatable="false">No internet connection. Please check your network.</string>
+    <string name="error_profile_not_found" translatable="false">User profile not found. Please sign up.</string>
+    <string name="error_wrong_password" translatable="false">Incorrect password. Please try again.</string>
+    <string name="error_email_in_use" translatable="false">This email is already in use. Please login.</string>
+    <string name="error_entity_name_required">Entity name required</string>
+    <string name="error_email_exists">Email already exists</string>
+    <string name="toast_signed_up_as">Signed up as %1$s!</string>
+    <string name="error_system_reset">System reset. Please try again.</string>
+    <string name="error_dashboard_ui">Dashboard UI Error</string>
+    <string name="toast_talent_heatmap">Opening District Talent Region...</string>
+    <string name="ready_to_train">\nReady to train?</string>
+    <string name="discovering_talent">\nDiscovering talent today?</string>
+    <string name="school_dashboard">\nSchool Dashboard</string>
+    <string name="academy_profile_subtitle">Academy Management Profile</string>
+    <string name="academy_type_location_format" translatable="false">%1$s • %2$s, %3$s</string>
+    <string name="district_location_format" translatable="false">%1$s District</string>
+    <string name="verified_academy" translatable="false">Verified Academy</string>
+    <string name="pending_verification" translatable="false">Pending Verification</string>
+    <string name="label_total_athletes" translatable="false">Total Athletes</string>
+    <string name="label_active_coaches" translatable="false">Active Coaches</string>
+    <string name="label_sports_offered" translatable="false">Sports Offered</string>
+    <string name="label_ground_facilities" translatable="false">Ground Facilities</string>
+    <string name="currency_format" translatable="false">₹%1$d</string>
+    <string name="label_est_revenue" translatable="false">Est. Revenue</string>
+    <string name="label_pending_requests" translatable="false">Pending Requests</string>
+    <string name="title_talent_discovery" translatable="false">Talent Discovery</string>
+    <string name="desc_talent_discovery" translatable="false">Find top performing athletes globally.</string>
+    <string name="title_athlete_mgmt" translatable="false">Athlete Management</string>
+    <string name="desc_athlete_mgmt" translatable="false">Register and manage academy athletes.</string>
+    <string name="title_coach_mgmt" translatable="false">Coach Management</string>
+    <string name="desc_coach_mgmt" translatable="false">Manage academy coaches.</string>
+    <string name="title_team_mgmt" translatable="false">Team Management</string>
+    <string name="desc_team_mgmt" translatable="false">Create and manage teams.</string>
+    <string name="title_ground_facilities" translatable="false">Ground &amp; Facilities</string>
+    <string name="desc_ground_facilities" translatable="false">Manage academy grounds and facilities.</string>
+    <string name="title_equipment_inventory" translatable="false">Equipment &amp; Inventory</string>
+    <string name="desc_equipment_inventory" translatable="false">Track sports equipment.</string>
+    <string name="title_attendance_system" translatable="false">Attendance System</string>
+    <string name="desc_attendance_system" translatable="false">Manage daily attendance.</string>
+    <string name="title_tournament_management" translatable="false">Tournament Management</string>
+    <string name="desc_tournament_management" translatable="false">Organize academy tournaments.</string>
+    <string name="title_performance_dashboard" translatable="false">Performance Dashboard</string>
+    <string name="desc_performance_dashboard" translatable="false">View athlete performance analytics.</string>
+    <string name="title_ai_video_analysis" translatable="false">AI Video Analysis</string>
+    <string name="desc_ai_video_analysis" translatable="false">Upload videos for biomechanical feedback.</string>
+    <string name="title_medical_injury_tracking" translatable="false">Medical &amp; Injury Tracking</string>
+    <string name="desc_medical_injury_tracking" translatable="false">Track athlete medical records.</string>
+    <string name="title_nutrition_diet_plans" translatable="false">Nutrition &amp; Diet</string>
+    <string name="desc_nutrition_diet_plans" translatable="false">Manage athlete nutrition plans.</string>
+    <string name="title_training_calendar" translatable="false">Training Calendar</string>
+    <string name="desc_training_calendar" translatable="false">View and manage practice schedules.</string>
+    <string name="title_coach_salary_payroll" translatable="false">Coach Salary &amp; Payroll</string>
+    <string name="desc_coach_salary_payroll" translatable="false">Manage coach salaries and payments.</string>
+    <string name="title_student_record_transfer" translatable="false">Student Record Transfer</string>
+    <string name="desc_student_record_transfer" translatable="false">Transfer athlete data between academies.</string>
+    <string name="title_reports" translatable="false">Reports</string>
+    <string name="desc_reports" translatable="false">Generate academy reports.</string>
+    <string name="cert_attached" translatable="false">Certificate Attached ✓</string>
+    <string name="verified_doc_linked" translatable="false">Verified Document Linked ✓</string>
+    <string name="gram_format" translatable="false">%1$.1fg</string>
+    <string name="processing_frames" translatable="false">Processing frames...</string>
+    <string name="final_score_format" translatable="false">%1$d%%</string>
+    <string name="final_reps_format" translatable="false">%1$d Reps</string>
+    <string name="calories_burned_format" translatable="false">Calories Burned: %1$d kcal</string>
+    <string name="arena_title_format" translatable="false">Pro Arena: %1$s</string>
+    <string name="ai_coach_title_format" translatable="false">%1$s AI Coach</string>
+    <string name="skill_title_format" translatable="false">%1$s: %2$s</string>
+    <string name="academy_blockchain_credentials">ACADEMY BLOCKCHAIN CREDENTIALS</string>
+    <string name="verified_academy_partner">Verified Academy Partner ID</string>
+    <string name="institution_portal_subtitle">Educational Institution Portal</string>
+    <string name="app_version_info" translatable="false">v1.0.4 - PratibhaScan Pro</string>
+    <string name="profile_id_format">%1$s (%2$s)</string>
+    <string name="logged_into_arena">Logged into %1$s Arena</string>
+    <string name="scanned_format" translatable="false">Scanned: %1$s</string>
+    <string name="bmi_format" translatable="false">%1$.2f</string>
+    <string name="accuracy_pct_format">%1$d%%</string>
+    <string name="stat_height_format">%1$s cm</string>
+    <string name="stat_wingspan_format">%1$s cm</string>
+    <string name="ai_active">AI ACTIVE</string>
+    <string name="ask_ai_agent">ASK AI AGENT</string>
+    <string name="live_ar_ghost_active">LIVE AR-GHOST: ACTIVE</string>
+    <string name="ai_coach_stats">AI COACH STATS</string>
+    <string name="label_reps">REPS</string>
+    <string name="label_accuracy">ACCURACY</string>
+    <string name="label_duration">DURATION</string>
+    <string name="label_calories">CALORIES</string>
+    <string name="align_to_start">Align yourself to start...</string>
+    <string name="ghost_controls">GHOST CONTROLS</string>
+    <string name="btn_pause">Pause</string>
+    <string name="btn_resume">Resume</string>
+    <string name="btn_finish">Finish</string>
+    <string name="btn_start_ai_analysis">Start AI Analysis Session</string>
+    <string name="label_academy_name">Official Academy Name</string>
+    <string name="hint_academy_name">e.g. My Sports Academy</string>
+    <string name="label_academy_phone">Academy Phone</string>
+    <string name="label_institution_name">Institution Name</string>
+    <string name="hint_institution_name">School or College Name</string>
+    <string name="hint_board_affiliation">CBSE, ICSE, State Board</string>
+    <string name="label_campus_address">Campus/Facility Address</string>
+    <string name="hint_campus_address">Plot No, Area, City</string>
+    <string name="license_attached">License Attached ✓</string>
+    <string name="document_attached">Document Attached ✓</string>
+    <string name="status_detecting">DETECTING BODY...</string>
+    <string name="status_partial">PARTIAL BODY</string>
+    <string name="status_full">FULL BODY DETECTED</string>
+    <string name="guide_move_back">Move back, full body not visible</string>
+    <string name="guide_center">Stand in the center</string>
+    <string name="guide_ready">Entire body detected. Ready!</string>
+    <string name="desc_silhouette">Body Outline Guide</string>
+    <string name="comparison_mode">COMPARISON MODE</string>
+
+    <string name="academy_portal_title">Academy Management Portal</string>
+    <string name="btn_athlete_mgmt">Athlete Registration</string>
+    <string name="btn_team_mgmt">Team Management</string>
+    <string name="btn_coach_mgmt">Coach Management</string>
+    <string name="btn_inventory_mgmt">Equipment &amp; Inventory</string>
+    <string name="btn_booking_mgmt">Ground &amp; Slot Booking</string>
+    <string name="btn_attendance_mgmt">Attendance System</string>
+    <string name="btn_ai_dashboard">AI Performance Dashboard</string>
+    <string name="btn_ai_video">AI Video Analysis</string>
+    <string name="btn_tournament_mgmt">Tournament Management</string>
+    <string name="btn_live_scoring">Live Tournament Scoring</string>
+    <string name="btn_medical_mgmt">Medical &amp; Injury Tracking</string>
+    <string name="btn_nutrition_mgmt">Nutrition &amp; Diet Plans</string>
+    <string name="btn_calendar_mgmt">Training Calendar</string>
+    <string name="btn_payroll_mgmt">Coach Salary &amp; Payroll</string>
+    <string name="btn_transfer_mgmt">Student Transfer</string>
+    <string name="btn_talent_ranking">AI Talent Ranking</string>
+    <string name="btn_recruitment_portal">Recruitment Portal</string>
+    <string name="btn_scholarship_mgmt">Scholarship Recommendation</string>
+    <string name="btn_parent_portal">Parent Portal</string>
+    <string name="btn_report_gen">Generate PDF Reports</string>
+
+    <string name="label_athlete_name">Athlete Name</string>
+    <string name="label_parent_details">Parent Details</string>
+    <string name="label_aadhaar_id">Aadhaar / Student ID</string>
+    <string name="label_joining_date">Joining Date</string>
+    <string name="label_medical_history">Medical History</string>
+    <string name="label_equipment_name">Equipment Name</string>
+    <string name="label_quantity">Quantity</string>
+    <string name="label_available_stock">Available Stock</string>
+
+    <string name="btn_school_board_reg">School &amp; Board Registration</string>
+    <string name="btn_pe_teacher_reg">PE Teacher Registration</string>
+    <string name="btn_student_reg_eco">Student Registration</string>
+    <string name="btn_digital_records_eco">Digital Records Archive</string>
+    <string name="btn_talent_discovery_eco">Talent Discovery Network</string>
+
+    <string name="btn_student_sports_profile">Student Sports Profile</string>
+    <string name="btn_scholarship_recommendation">Scholarship Recommendation</string>
+    <string name="btn_university_recruitment">University Recruitment</string>
+    <string name="btn_sports_analytics">Sports Analytics Dashboard</string>
+    <string name="btn_attendance_analytics">Attendance Analytics</string>
+    <string name="btn_notification_center">Notification Center</string>
+    <string name="btn_ai_video_analysis_inst">AI Video Analysis</string>
+
+    <string name="inst_portal_title">Institution Management Portal</string>
+    <string name="label_inst_id_format" translatable="false">INST-ID: %1$04d</string>
+    <string name="verified_institution" translatable="false">Verified Institution</string>
+    <string name="title_student_mgmt" translatable="false">Student Directory</string>
+    <string name="desc_student_mgmt" translatable="false">Manage all student athletes.</string>
+    <string name="title_pe_teacher_portal" translatable="false">PE Teacher Portal</string>
+    <string name="desc_pe_teacher_portal" translatable="false">Manage physical education staff.</string>
+    <string name="title_sports_teams" translatable="false">Sports Teams</string>
+    <string name="desc_sports_teams" translatable="false">Manage school/college sports teams.</string>
+    <string name="title_fit_india" translatable="false">Fit India Assessment</string>
+    <string name="desc_fit_india" translatable="false">Conduct Fit India fitness tests.</string>
+    <string name="title_practical_exam" translatable="false">Practical Examination</string>
+    <string name="desc_practical_exam" translatable="false">Manage sports practical exams.</string>
+    <string name="title_ai_student_assessment" translatable="false">AI Student Assessment</string>
+    <string name="desc_ai_student_assessment" translatable="false">AI-driven student performance tracking.</string>
+    <string name="title_parent_portal" translatable="false">Parent Portal</string>
+    <string name="desc_parent_portal" translatable="false">Connect parents with student sports progress.</string>
+    <string name="title_student_sports_profile" translatable="false">Student Sports Profile</string>
+    <string name="desc_student_sports_profile" translatable="false">Comprehensive digital sports CV.</string>
+    <string name="title_scholarship_recommendation" translatable="false">Scholarship Recommendation</string>
+    <string name="desc_scholarship_recommendation" translatable="false">AI-based scholarship eligibility.</string>
+    <string name="title_university_recruitment" translatable="false">University Recruitment</string>
+    <string name="desc_university_recruitment" translatable="false">Connect with university scouts.</string>
+    <string name="title_sports_analytics" translatable="false">Sports Analytics</string>
+    <string name="desc_sports_analytics" translatable="false">Advanced institution-wide analytics.</string>
+    <string name="title_attendance_analytics" translatable="false">Attendance Analytics</string>
+    <string name="desc_attendance_analytics" translatable="false">Student participation trends.</string>
+    <string name="title_notification_center" translatable="false">Notification Center</string>
+    <string name="desc_notification_center" translatable="false">Broadcast alerts to students and staff.</string>
+    <string name="label_total_students" translatable="false">Total Students</string>
+    <string name="label_sports_students" translatable="false">Sports Students</string>
+    <string name="label_pe_teachers" translatable="false">PE Teachers</string>
+    <string name="label_sports_teams" translatable="false">Sports Teams</string>
+    <string name="label_grounds" translatable="false">Ground Facilities</string>
+    <string name="label_equipment" translatable="false">Equipment</string>
+    <string name="label_attendance_stat" translatable="false">Attendance</string>
+    <string name="label_upcoming_events" translatable="false">Upcoming Events</string>
+    <string name="label_active_tournaments" translatable="false">Active Tournaments</string>
+    <string name="label_pending_approvals" translatable="false">Pending Approvals</string>
+    <string name="label_medical_cases" translatable="false">Medical Cases</string>
+    <string name="btn_student_mgmt">Student Registration</string>
+    <string name="btn_pe_portal">PE Teacher Portal</string>
+    <string name="btn_inst_teams">Sports Team Management</string>
+    <string name="btn_inst_equipment">Equipment Management</string>
+    <string name="btn_inst_booking">Ground &amp; Slot Booking</string>
+    <string name="btn_fit_india">Fit India Assessment</string>
+    <string name="btn_practical_exam">Practical Examination</string>
+    <string name="btn_ai_student_dash">AI Student Assessment</string>
+    <string name="btn_inst_tournament">Live Tournament Management</string>
+    <string name="btn_inst_medical">Medical &amp; Injury Tracking</string>
+    <string name="btn_inst_calendar">Sports Training Calendar</string>
+
+    <string name="title_academy_mgmt">Academy Management Portal</string>
+    <string name="btn_athlete_reg">Athlete Registration</string>
+    <string name="btn_team_mgmt_aca">Team Management</string>
+    <string name="btn_coach_mgmt_aca">Coach Management</string>
+    <string name="btn_inventory_aca">Equipment &amp; Inventory</string>
+    <string name="btn_booking_aca">Ground &amp; Slot Booking</string>
+    <string name="btn_attendance_aca">Attendance System</string>
+    <string name="btn_ai_dash_aca">AI Performance Dashboard</string>
+    <string name="btn_ai_video_aca">AI Video Analysis</string>
+    <string name="btn_tournament_aca">Tournament Management</string>
+    <string name="btn_medical_aca">Medical &amp; Injury Tracking</string>
+    <string name="btn_nutrition_aca">Nutrition &amp; Diet</string>
+    <string name="btn_calendar_aca">Training Calendar</string>
+    <string name="btn_payroll_aca">Coach Salary &amp; Payroll</string>
+    <string name="btn_reports_aca">Generate Reports</string>
+    <string name="btn_transfer_aca">Student Record Transfer</string>
+    <string name="btn_student_transfer">Student Record Transfer</string>
+    <string name="btn_inst_reports">Generate PDF Reports</string>
+
+    <string name="title_discovery_entry">Ecosystem Discovery &amp; Entry</string>
+    <string name="btn_academy_profile_entry">Academy Profile &amp; Registration</string>
+    <string name="btn_coach_entry_interface">Coach Entry Interface</string>
+    <string name="btn_talent_map_entry">Talent Discovery Map</string>
+    <string name="label_register">Register</string>
+    <string name="label_profile">Profile</string>
+    <string name="label_portal">Portal</string>
+    <string name="label_radar">Radar</string>
+    <string name="label_locator">Locator</string>
+
+    <string name="academy_portal" translatable="false">Academy Portal</string>
+    <string name="academy_analytics_label" translatable="false">Academy Analytics</string>
+    <string name="system_architecture" translatable="false">System Architecture</string>
+    <string name="weather_placeholder" translatable="false">28°C Sunny</string>
+    <string name="date_placeholder" translatable="false">25 July 2026</string>
+    <string name="desc_academy_logo" translatable="false">Academy Logo</string>
+    <string name="desc_search" translatable="false">Search</string>
+    <string name="desc_notifications" translatable="false">Notifications</string>
+    <string name="desc_profile" translatable="false">Profile</string>
+    <string name="blockchain_id_label" translatable="false">BLOCKCHAIN ATHLETE ID</string>
+    <string name="blockchain_status_verified" translatable="false">Verified Tamper-Proof Identity</string>
+    <string name="btn_share_passport" translatable="false">SHARE PASSPORT</string>
+    <string name="section_academy_profile" translatable="false">Academy Profile &amp; Registration</string>
+    <string name="section_coach_hub" translatable="false">Coach Entry &amp; Management</string>
+    <string name="section_talent_map" translatable="false">Talent Discovery Map</string>
+    <string name="btn_ops_portal" translatable="false">Ops Portal</string>
+    <string name="btn_recruit" translatable="false">Recruit</string>
+    <string name="btn_radar_launch_label" translatable="false">Launch TalentRadar AI</string>
+    <string name="management_hub_label" translatable="false">ACADEMY CORE MANAGEMENT</string>
+
+    <string name="btn_ground_booking" translatable="false">Ground Booking</string>
+    <string name="btn_athlete_registration" translatable="false">Athlete Registration</string>
+    <string name="btn_team_management" translatable="false">Team Management</string>
+    <string name="btn_attendance_system" translatable="false">Attendance System</string>
+    <string name="btn_equipment_stock" translatable="false">Equipment &amp; Stock</string>
+    <string name="btn_tournament_mgmt_label" translatable="false">Tournament Mgmt</string>
+    <string name="btn_nutrition_diet" translatable="false">Nutrition &amp; Diet</string>
+    <string name="btn_training_calendar" translatable="false">Training Calendar</string>
+    <string name="btn_medical_injury" translatable="false">Medical &amp; Injury</string>
+    <string name="btn_ai_video_analysis_label" translatable="false">AI Video Analysis</string>
+    <string name="desc_map" translatable="false">Map</string>
+    <string name="desc_expand" translatable="false">Expand</string>
+    <string name="desc_icon" translatable="false">Icon</string>
+    <string name="desc_blockchain_qr" translatable="false">Blockchain QR</string>
+    <string name="desc_ops" translatable="false">Operations</string>
+    <string name="desc_recruit" translatable="false">Recruit</string>
+    <string name="desc_coach" translatable="false">Coach</string>
+    <string name="label_docs" translatable="false">Documents</string>
+    <string name="label_verification" translatable="false">Verification</string>
+    <string name="label_payroll" translatable="false">Payroll</string>
+    <string name="label_attendance" translatable="false">Attendance</string>
+    <string name="label_blockchain_loading" translatable="false">ATH-BC-LOADING</string>
+
+    <string name="reg_no_format">Reg No: %1$s</string>
+    <string name="director_format">Director: %1$s</string>
+    <string name="address_format">%1$s, %2$s</string>
+    <string name="membership_format">Membership: %1$s</string>
+    <string name="desc_indoor">Badminton, Table Tennis, Chess, Volleyball, Carrom, Basketball &amp; more.</string>
+    <string name="desc_outdoor">Cricket, Football, Hockey, Rugby, Baseball, Athletics Field &amp; more.</string>
+    <string name="desc_athletics">Running, Jumping, Throwing, Track &amp; Field, Marathon, Relay &amp; more.</string>
+    <string name="desc_other">Swimming, Cycling, Yoga, Gymnastics, Strength, Pilates &amp; more.</string>
+    <string name="btn_explore_domain">Explore Domain</string>
+</resources>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/card_bg">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Process Coach Payroll"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/et_payroll_coach_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Coach ID"
+        android:inputType="number"
+        android:textColor="@color/white"
+        android:textColorHint="@color/text_tertiary"
+        android:backgroundTint="@color/brand_blue" />
+
+    <EditText
+        android:id="@+id/et_payroll_month"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="Month/Year (e.g. July 2024)"
+        android:textColor="@color/white"
+        android:textColorHint="@color/text_tertiary"
+        android:backgroundTint="@color/brand_blue" />
+
+    <EditText
+        android:id="@+id/et_payroll_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="Total Paid Amount (₹)"
+        android:inputType="numberDecimal"
+        android:textColor="@color/white"
+        android:textColorHint="@color/text_tertiary"
+        android:backgroundTint="@color/brand_blue" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_confirm_add_payroll"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="32dp"
+        android:text="CONFIRM PAYMENT"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:cornerRadius="12dp"
+        app:backgroundTint="@color/brand_blue" />
+
+</LinearLayout>

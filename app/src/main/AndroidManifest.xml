@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.ar" android:required="false" />
+
+    <application
+        android:name=".SportsAIApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:extractNativeLibs="false"
+        android:theme="@style/Theme.Prathibhascanfinal">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyC7h-gPtJCmubftDGC-TbSuiT7nYTMLFso" />
+
+        <meta-data android:name="com.google.ar.core" android:value="optional" />
+        <activity
+            android:name=".AcademyBookingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AcademyTeamActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AcademyPerformanceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InstitutionTournamentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InstitutionBookingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InstitutionTeamActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InstitutionTeamDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InstitutionPerformanceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InstitutionExamActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InstitutionFitIndiaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InstitutionStudentRegistrationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InstitutionPortalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InstitutionEquipmentActivity"
+            android:exported="false" />
+        <activity android:name=".InstitutionParentPortalActivity" android:exported="false" />
+        <activity android:name=".StudentSportsProfileActivity" android:exported="false" />
+        <activity android:name=".ScholarshipRecommendationActivity" android:exported="false" />
+        <activity android:name=".UniversityRecruitmentActivity" android:exported="false" />
+        <activity android:name=".InstitutionSportsAnalyticsActivity" android:exported="false" />
+        <activity android:name=".InstitutionAttendanceAnalyticsActivity" android:exported="false" />
+        <activity android:name=".NotificationCenterActivity" android:exported="false" />
+        <activity
+            android:name=".AcademyTournamentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AcademyAttendanceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AcademyInventoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AcademyAthleteRegistrationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AcademyPortalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AcademySportDetailsActivity"
+            android:exported="false" />
+        <activity android:name=".AcademyCoachDirectoryActivity" android:exported="false" />
+        <activity android:name=".AcademyAthleteDirectoryActivity" android:exported="false" />
+        <activity android:name=".AcademyVideoAnalysisActivity" android:exported="false" />
+        <activity android:name=".AcademyMedicalActivity" android:exported="false" />
+        <activity android:name=".AcademyNutritionActivity" android:exported="false" />
+        <activity android:name=".AcademyPayrollActivity" android:exported="false" />
+        <activity android:name=".AcademyTrainingCalendarActivity" android:exported="false" />
+        <activity android:name=".AcademyTransferActivity" android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".AuthActivity" android:exported="false" />
+        <activity android:name=".DashboardActivity" android:exported="false" />
+        <activity android:name=".ProfileSetupActivity" android:exported="false" />
+        <activity android:name=".AcademyRegistrationActivity" android:exported="false" />
+        <activity android:name=".CoachPortfolioActivity" android:exported="false" />
+        <activity android:name=".InstitutionRegistrationActivity" android:exported="false" />
+        <activity android:name=".PETeacherRegistrationActivity" android:exported="false" android:screenOrientation="portrait" />
+        <activity android:name=".TalentRadarActivity" android:exported="false" />
+        <activity android:name=".AchievementVaultActivity" android:exported="false" />
+        <activity android:name=".SportEnrollmentActivity" android:exported="false" />
+        <activity android:name=".SportAnalysisActivity" android:exported="false" />
+        <activity android:name=".HealthUpdateActivity" android:exported="false" />
+        <activity android:name=".AICoachActivity" android:exported="false" />
+        <activity android:name=".TalentScoutingActivity" android:exported="false" />
+        <activity android:name=".AcademyScoutingActivity" android:exported="false" />
+        <activity android:name=".GameDashboardActivity" android:exported="false" />
+        <activity android:name=".SportDashboardActivity" android:exported="false" />
+        <activity android:name=".SkillSelectionActivity" android:exported="false" />
+        <activity android:name=".ReportActivity" android:exported="false" />
+        <activity android:name=".AcademyProfileActivity" android:exported="false" android:screenOrientation="portrait" />
+        <activity android:name=".InstitutionProfileActivity" android:exported="false" android:screenOrientation="portrait" />
+        <activity android:name=".InstitutionTeacherDirectoryActivity" android:exported="false" android:screenOrientation="portrait" />
+        <activity android:name=".InstitutionMedicalActivity" android:exported="false" android:screenOrientation="portrait" />
+        <activity android:name=".InstitutionCalendarActivity" android:exported="false" android:screenOrientation="portrait" />
+        <activity android:name=".EditInstitutionProfileActivity" android:exported="false" android:screenOrientation="portrait" />
+        <activity android:name=".EditAcademyProfileActivity" android:exported="false" android:screenOrientation="portrait" />
+        <activity android:name=".AcademyAnalyticsActivity" android:exported="false" android:screenOrientation="portrait" />
+        <activity android:name=".AcademyNotificationsActivity" android:exported="false" android:screenOrientation="portrait" />
+        <activity android:name=".AcademySettingsActivity" android:exported="false" android:screenOrientation="portrait" />
+        <activity android:name=".AcademyReportsActivity" android:exported="false" android:screenOrientation="portrait" />
+        <activity android:name=".PremiumProfileActivity" android:exported="false" />
+        <activity android:name=".TalentRegionActivity" android:exported="false" />
+        <activity android:name=".VideoAnalysisActivity" android:exported="false" />
+        <activity android:name=".AcademyDiscoveryActivity" android:exported="false" />
+        <activity android:name=".TournamentRegistrationsActivity" android:exported="false" />
+        <activity android:name=".AcademyInvitationsActivity" android:exported="false" />
+        <activity android:name=".InstitutionStudentDirectoryActivity" android:exported="false" />
+        <activity android:name=".AcademyFacilityActivity" android:exported="false" />
+        <activity android:name=".AcademyTeamDetailActivity" android:exported="false" />
+        <activity android:name=".AthleteDiscoveryActivity" android:exported="false" />
+        <activity android:name=".ManagementDetailActivity" android:exported="false" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.prathibhascanfinal.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

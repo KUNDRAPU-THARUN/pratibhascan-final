@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/inst_profile_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark"
+    tools:context=".InstitutionProfileActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent">
+        <include layout="@layout/layout_global_header" android:id="@+id/layout_global_header" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="40dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Premium Profile Header -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/card_bg"
+                app:cardCornerRadius="28dp"
+                app:strokeWidth="0dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="24dp"
+                    android:gravity="center">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="110dp"
+                        android:layout_height="110dp"
+                        app:cardCornerRadius="55dp"
+                        app:strokeWidth="3dp"
+                        app:strokeColor="@color/brand_blue">
+                        <ImageView
+                            android:id="@+id/iv_inst_logo_profile"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_academy_emblem"
+                            android:padding="20dp"
+                            app:tint="@color/brand_blue" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:id="@+id/tv_profile_inst_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        tools:text="Springfield High School"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tv_profile_inst_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        tools:text="Senior Secondary School • Private"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:background="@drawable/bg_chip_verified"
+                        android:paddingHorizontal="12dp"
+                        android:paddingVertical="4dp">
+                        <TextView
+                            android:id="@+id/tv_verification_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="VERIFIED INSTITUTION"
+                            android:textColor="@color/brand_green"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+                        <ImageView
+                            android:layout_width="14dp"
+                            android:layout_height="14dp"
+                            android:layout_marginStart="6dp"
+                            android:src="@android:drawable/ic_lock_idle_lock"
+                            app:tint="@color/brand_green" />
+                    </LinearLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_edit_profile_main"
+                        style="@style/Widget.Material3.Button.TonalButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:text="MANAGE IDENTITY"
+                        app:cornerRadius="12dp"
+                        android:textSize="12sp"
+                        android:letterSpacing="0.05"
+                        app:backgroundTint="#1E293B"
+                        android:textColor="@color/brand_blue" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Quick Stats Grid -->
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:columnCount="2"
+                android:alignmentMode="alignMargins">
+
+                <include layout="@layout/item_dashboard_stat_card" android:id="@+id/stat_total_students" />
+                <include layout="@layout/item_dashboard_stat_card" android:id="@+id/stat_sports_offered" />
+                <include layout="@layout/item_dashboard_stat_card" android:id="@+id/stat_pe_teachers" />
+                <include layout="@layout/item_dashboard_stat_card" android:id="@+id/stat_grounds" />
+
+            </GridLayout>
+
+            <!-- Institution Identity Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:text="INSTITUTIONAL IDENTITY"
+                android:textColor="@color/brand_blue"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.1" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:cardBackgroundColor="@color/card_bg_light"
+                app:cardCornerRadius="20dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/button_border">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <TextView android:id="@+id/tv_detail_inst_id" style="@style/SettingsItemStyle" tools:text="INST-ID: 0042" android:drawableStart="@android:drawable/ic_menu_info_details" />
+                    <View style="@style/SettingsDividerStyle" />
+                    <TextView android:id="@+id/tv_detail_reg_no" style="@style/SettingsItemStyle" tools:text="Reg No: SHS/2026/88" android:drawableStart="@android:drawable/ic_menu_agenda" />
+                    <View style="@style/SettingsDividerStyle" />
+                    <TextView android:id="@+id/tv_detail_est_year" style="@style/SettingsItemStyle" tools:text="Established: 1995" android:drawableStart="@android:drawable/ic_menu_today" />
+                    <View style="@style/SettingsDividerStyle" />
+                    <TextView android:id="@+id/tv_detail_affiliation" style="@style/SettingsItemStyle" tools:text="Affiliation: CBSE Central Board" android:drawableStart="@android:drawable/ic_menu_share" />
+                    <View style="@style/SettingsDividerStyle" />
+                    <TextView android:id="@+id/tv_detail_principal" style="@style/SettingsItemStyle" tools:text="Principal: Dr. Sarah Johnson" android:drawableStart="@android:drawable/ic_menu_myplaces" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Contact Hub -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:text="CONTACT HUB"
+                android:textColor="@color/brand_gold"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.1" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:cardBackgroundColor="@color/card_bg_light"
+                app:cardCornerRadius="20dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/button_border">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <TextView android:id="@+id/tv_contact_email" style="@style/SettingsItemStyle" tools:text="contact@springfield.edu" android:drawableStart="@android:drawable/ic_dialog_email" />
+                    <View style="@style/SettingsDividerStyle" />
+                    <TextView android:id="@+id/tv_contact_phone" style="@style/SettingsItemStyle" tools:text="+91 98765 43210" android:drawableStart="@android:drawable/ic_menu_call" />
+                    <View style="@style/SettingsDividerStyle" />
+                    <TextView android:id="@+id/tv_contact_website" style="@style/SettingsItemStyle" tools:text="www.springfield.edu" android:drawableStart="@android:drawable/ic_menu_directions" />
+                    <View style="@style/SettingsDividerStyle" />
+                    <TextView android:id="@+id/tv_contact_address" style="@style/SettingsItemStyle" tools:text="123 Campus Road, City Center" android:drawableStart="@android:drawable/ic_dialog_map" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Infrastructure & Recognition -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:text="INFRASTRUCTURE &amp; RECOGNITION"
+                android:textColor="@color/brand_green"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.1" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:cardBackgroundColor="@color/card_bg_light"
+                app:cardCornerRadius="20dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/button_border">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <TextView android:id="@+id/tv_infra_status" style="@style/SettingsItemStyle" tools:text="Status: recognized" android:drawableStart="@android:drawable/ic_menu_view" />
+                    <View style="@style/SettingsDividerStyle" />
+                    <TextView android:id="@+id/tv_infra_area" style="@style/SettingsItemStyle" tools:text="Campus Area: 12 Acres" android:drawableStart="@android:drawable/ic_menu_crop" />
+                    <View style="@style/SettingsDividerStyle" />
+                    <TextView android:id="@+id/tv_infra_buildings" style="@style/SettingsItemStyle" tools:text="Buildings: 4 Wings" android:drawableStart="@android:drawable/ic_menu_gallery" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Account Settings -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:text="ACCOUNT SETTINGS"
+                android:textColor="@color/brand_red"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.1" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:cardBackgroundColor="@color/card_bg_light"
+                app:cardCornerRadius="20dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/button_border">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <TextView android:id="@+id/btn_change_password" style="@style/SettingsItemStyle" android:text="Security &amp; Password" android:drawableStart="@android:drawable/ic_lock_idle_lock" />
+                    <View style="@style/SettingsDividerStyle" />
+                    <TextView android:id="@+id/btn_data_backup" style="@style/SettingsItemStyle" android:text="Cloud Data Backup" android:drawableStart="@android:drawable/ic_menu_save" />
+                    <View style="@style/SettingsDividerStyle" />
+                    <TextView android:id="@+id/tv_last_sync" style="@style/SettingsItemStyle" tools:text="Last Sync: 12 July, 10:30 AM" android:drawableStart="@android:drawable/ic_menu_recent_history" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Logout Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_logout_inst"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="40dp"
+                android:text="SECURE LOGOUT"
+                android:textColor="@color/brand_red"
+                app:backgroundTint="#2D1B1B"
+                app:cornerRadius="16dp"
+                android:paddingVertical="14dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

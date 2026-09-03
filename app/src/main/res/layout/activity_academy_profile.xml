@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/academy_profile_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark"
+    tools:context=".AcademyProfileActivity">
+
+    <include
+        layout="@layout/layout_global_header"
+        android:id="@+id/layout_global_header"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/layout_global_header"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Profile Header Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/card_bg_light"
+                app:cardCornerRadius="24dp"
+                app:strokeWidth="0dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="24dp"
+                    android:gravity="center">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        app:cardCornerRadius="50dp"
+                        app:strokeWidth="2dp"
+                        app:strokeColor="@color/brand_blue">
+                        <ImageView
+                            android:id="@+id/iv_academy_logo_profile"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_academy_emblem"
+                            android:padding="16dp"
+                            app:tint="@color/brand_blue" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:id="@+id/tv_profile_academy_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        tools:text="Academy Name"
+                        android:textColor="@color/white"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/tv_verification_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text="VERIFIED"
+                            android:textColor="@color/brand_green"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_marginStart="4dp"
+                            android:src="@android:drawable/ic_lock_idle_lock"
+                            app:tint="@color/brand_green" />
+                    </LinearLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_edit_profile_main"
+                        style="@style/Widget.Material3.Button.TonalButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="EDIT ACCOUNT"
+                        app:cornerRadius="12dp"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Grid Stats -->
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:columnCount="2"
+                android:alignmentMode="alignMargins">
+
+                <com.google.android.material.card.MaterialCardView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:layout_margin="4dp" app:cardBackgroundColor="@color/card_bg_light" app:cardCornerRadius="16dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TOTAL ATHLETES" android:textColor="@color/text_secondary" android:textSize="10sp" android:textStyle="bold" />
+                        <TextView android:id="@+id/tv_stat_total_athletes" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" tools:text="0" android:textColor="@color/white" android:textSize="18sp" android:textStyle="bold" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:layout_margin="4dp" app:cardBackgroundColor="@color/card_bg_light" app:cardCornerRadius="16dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ACTIVE COACHES" android:textColor="@color/text_secondary" android:textSize="10sp" android:textStyle="bold" />
+                        <TextView android:id="@+id/tv_stat_total_coaches" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" tools:text="0" android:textColor="@color/brand_gold" android:textSize="18sp" android:textStyle="bold" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </GridLayout>
+
+            <!-- Detailed Info -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="ORGANIZATION DETAILS"
+                android:textColor="@color/brand_blue"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.05" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:cardBackgroundColor="@color/card_bg_light"
+                app:cardCornerRadius="20dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <TextView android:id="@+id/tv_detail_reg_no" style="@style/SettingsItemStyle" tools:text="Reg No: ----" android:drawableStart="@android:drawable/ic_menu_agenda" />
+                    <View style="@style/SettingsDividerStyle" />
+                    <TextView android:id="@+id/tv_detail_owner" style="@style/SettingsItemStyle" tools:text="Director: ----" android:drawableStart="@android:drawable/ic_menu_myplaces" />
+                    <View style="@style/SettingsDividerStyle" />
+                    <TextView android:id="@+id/tv_detail_address" style="@style/SettingsItemStyle" tools:text="Address: ----" android:drawableStart="@android:drawable/ic_dialog_map" />
+                    <View style="@style/SettingsDividerStyle" />
+                    <TextView android:id="@+id/tv_detail_membership" style="@style/SettingsItemStyle" tools:text="Membership: ----" android:drawableStart="@android:drawable/btn_star_big_on" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Account Actions -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="ACCOUNT HUB"
+                android:textColor="@color/brand_gold"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.05" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:cardBackgroundColor="@color/card_bg_light"
+                app:cardCornerRadius="20dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <TextView android:id="@+id/btn_open_analytics" style="@style/SettingsItemStyle" android:text="My Real-Time Analytics" android:drawableStart="@android:drawable/ic_menu_info_details" />
+                    <View style="@style/SettingsDividerStyle" />
+                    <TextView android:id="@+id/btn_open_reports" style="@style/SettingsItemStyle" android:text="Generated Reports" android:drawableStart="@android:drawable/ic_menu_save" />
+                    <View style="@style/SettingsDividerStyle" />
+                    <TextView android:id="@+id/btn_open_settings" style="@style/SettingsItemStyle" android:text="Account &amp; Security Settings" android:drawableStart="@android:drawable/ic_menu_manage" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Logout Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_logout_confirm"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="40dp"
+                android:text="SECURE LOGOUT"
+                android:textColor="@color/brand_red"
+                app:backgroundTint="#2D1B1B"
+                app:cornerRadius="12dp"
+                android:paddingVertical="14dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

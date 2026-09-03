@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="4dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="@color/button_border"
+    app:cardBackgroundColor="@color/card_bg_light">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/iv_sport_icon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_academy_emblem"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/brand_blue" />
+
+        <TextView
+            android:id="@+id/tv_sport_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="CRICKET"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/tv_status_badge"
+            app:layout_constraintStart_toEndOf="@id/iv_sport_icon"
+            app:layout_constraintTop_toTopOf="@id/iv_sport_icon" />
+
+        <TextView
+            android:id="@+id/tv_sport_details"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Opening Batsman • Level 3"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/tv_status_badge"
+            app:layout_constraintStart_toStartOf="@id/tv_sport_name"
+            app:layout_constraintTop_toBottomOf="@id/tv_sport_name" />
+
+        <TextView
+            android:id="@+id/tv_status_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_pill_badge"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="4dp"
+            android:text="VERIFIED"
+            android:textColor="@color/background_dark"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/brand_green"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/button_border"
+            app:layout_constraintTop_toBottomOf="@id/iv_sport_icon" />
+
+        <LinearLayout
+            android:id="@+id/layout_stats"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/divider">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MASTERY"
+                    android:textColor="@color/text_tertiary"
+                    android:textSize="9sp"
+                    android:textStyle="bold" />
+                <ProgressBar
+                    android:id="@+id/pb_mastery"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    android:layout_marginTop="4dp"
+                    android:progress="65"
+                    android:progressTint="@color/brand_blue" />
+                <TextView
+                    android:id="@+id/tv_mastery_pct"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="65%"
+                    android:textColor="@color/white"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <View android:layout_width="16dp" android:layout_height="0dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="XP"
+                    android:textColor="@color/text_tertiary"
+                    android:textSize="9sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/tv_sport_xp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+250"
+                    android:textColor="@color/brand_gold"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <View android:layout_width="16dp" android:layout_height="0dp" />
+
+            <ImageView
+                android:id="@+id/iv_blockchain_badge"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_lock_idle_lock"
+                app:tint="@color/brand_gold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            app:layout_constraintTop_toBottomOf="@id/layout_stats">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_ai_coach"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.9"
+                android:text="AI Coach"
+                android:textSize="9sp"
+                app:icon="@drawable/ic_ai_badge"
+                app:iconSize="12dp"
+                android:paddingHorizontal="4dp"
+                android:minWidth="0dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_ar_ghost"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.9"
+                android:layout_marginStart="4dp"
+                android:text="AR Ghost"
+                android:textSize="9sp"
+                app:icon="@android:drawable/ic_menu_view"
+                app:iconSize="12dp"
+                android:paddingHorizontal="4dp"
+                android:minWidth="0dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_open_arena"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:layout_marginStart="4dp"
+                android:text="Open Arena"
+                android:textSize="9sp"
+                app:backgroundTint="@color/brand_blue"
+                android:textColor="@color/white"
+                android:paddingHorizontal="4dp"
+                android:minWidth="0dp" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

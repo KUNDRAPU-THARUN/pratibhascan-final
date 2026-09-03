@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/student_reg_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#020617"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Student Registration"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:cardCornerRadius="12dp"
+            app:cardBackgroundColor="#1E293B">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <ImageView
+                    android:id="@+id/iv_student_photo"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:src="@android:drawable/ic_menu_camera"
+                    android:background="#0F172A"
+                    android:padding="20dp"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <EditText
+                    android:id="@+id/et_student_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:hint="Full Name"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#3B82F6" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="12dp">
+                    <EditText
+                        android:id="@+id/et_roll_no"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Roll Number"
+                        android:textColor="@color/white"
+                        android:backgroundTint="#3B82F6" />
+                    <EditText
+                        android:id="@+id/et_class"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Class/Grade"
+                        android:textColor="@color/white"
+                        android:backgroundTint="#3B82F6" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="12dp">
+                    <EditText
+                        android:id="@+id/et_section"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Section"
+                        android:textColor="@color/white"
+                        android:backgroundTint="#3B82F6" />
+                    <EditText
+                        android:id="@+id/et_dept"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Dept (Colleges)"
+                        android:textColor="@color/white"
+                        android:backgroundTint="#3B82F6" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="12dp">
+                    <EditText
+                        android:id="@+id/et_age"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Age"
+                        android:inputType="number"
+                        android:textColor="@color/white"
+                        android:backgroundTint="#3B82F6" />
+                    <Spinner
+                        android:id="@+id/sp_gender"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="#3B82F6" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/et_parent_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="Parent Name &amp; Phone"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#3B82F6" />
+
+                <EditText
+                    android:id="@+id/et_student_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="Student ID / Aadhaar"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#3B82F6" />
+
+                <EditText
+                    android:id="@+id/et_selected_sport"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="Selected Sport"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#3B82F6" />
+
+                <EditText
+                    android:id="@+id/et_medical_history"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="12dp"
+                    android:hint="Medical History"
+                    android:gravity="top"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#3B82F6" />
+
+                <Button
+                    android:id="@+id/btn_save_student"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="32dp"
+                    android:text="Register Student"
+                    android:backgroundTint="#10B981"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark"
+    android:fitsSystemWindows="true">
+
+    <!-- Progress Header -->
+    <LinearLayout
+        android:id="@+id/progress_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_step_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Step 1: Academy Core"
+            android:textColor="@color/brand_blue"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ProgressBar
+            android:id="@+id/registration_progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_marginTop="12dp"
+            android:progress="20"
+            android:progressBackgroundTint="@color/card_bg_light"
+            android:progressTint="@color/brand_blue" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@id/navigation_container"
+        app:layout_constraintTop_toBottomOf="@id/progress_container">
+
+        <FrameLayout
+            android:id="@+id/step_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <!-- STEP 1: LOGISTICS -->
+            <LinearLayout
+                android:id="@+id/layout_step1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Official Entity Name"
+                    android:textColorHint="@color/text_secondary"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:boxStrokeColor="@color/brand_blue"
+                    app:hintTextColor="@color/brand_blue">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_academy_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:inputType="textCapWords" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:hint="Director / Owner Name"
+                    android:textColorHint="@color/text_secondary"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:boxStrokeColor="@color/brand_blue"
+                    app:hintTextColor="@color/brand_blue">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_director_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:inputType="textCapWords" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:hint="Physical Address"
+                    android:textColorHint="@color/text_secondary"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:boxStrokeColor="@color/brand_blue"
+                    app:hintTextColor="@color/brand_blue">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_academy_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:hint="Plot No, Street, Landmark"
+                        android:textColorHint="@color/text_tertiary" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="16dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="City"
+                        android:textColorHint="@color/text_secondary"
+                        app:boxCornerRadiusTopStart="12dp"
+                        app:boxCornerRadiusTopEnd="12dp"
+                        app:boxCornerRadiusBottomStart="12dp"
+                        app:boxCornerRadiusBottomEnd="12dp"
+                        app:boxStrokeColor="@color/brand_blue"
+                        app:hintTextColor="@color/brand_blue">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_academy_city"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <View android:layout_width="12dp" android:layout_height="0dp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="District"
+                        android:textColorHint="@color/text_secondary"
+                        app:boxCornerRadiusTopStart="12dp"
+                        app:boxCornerRadiusTopEnd="12dp"
+                        app:boxCornerRadiusBottomStart="12dp"
+                        app:boxCornerRadiusBottomEnd="12dp"
+                        app:boxStrokeColor="@color/brand_blue"
+                        app:hintTextColor="@color/brand_blue">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_academy_district"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:hint="State"
+                    android:textColorHint="@color/text_secondary"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:boxStrokeColor="@color/brand_blue"
+                    app:hintTextColor="@color/brand_blue">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_academy_state"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:hint="Official Registration No."
+                    android:textColorHint="@color/text_secondary"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:boxStrokeColor="@color/brand_blue"
+                    app:hintTextColor="@color/brand_blue">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_reg_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:hint="CERT-XXXX-2024"
+                        android:textColorHint="@color/text_tertiary" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Specialized Domains"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.checkbox.MaterialCheckBox android:id="@+id/cb_domain_indoor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Indoor Games" android:textColor="@color/white" app:buttonTint="@color/brand_blue" />
+                <com.google.android.material.checkbox.MaterialCheckBox android:id="@+id/cb_domain_outdoor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Outdoor Games" android:textColor="@color/white" app:buttonTint="@color/brand_blue" />
+                <com.google.android.material.checkbox.MaterialCheckBox android:id="@+id/cb_domain_athletics" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Athletics" android:textColor="@color/white" app:buttonTint="@color/brand_blue" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_upload_license"
+                    style="@style/Widget.Material3.Button.TonalButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Upload Federation License"
+                    app:backgroundTint="@color/card_bg_light"
+                    app:icon="@android:drawable/ic_menu_upload"
+                    app:iconTint="@color/white"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <!-- STEP 2: AI READINESS -->
+            <LinearLayout
+                android:id="@+id/layout_step2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Biomechanical Tools Used" android:textColor="@color/text_secondary" android:textSize="12sp" android:textStyle="bold" />
+                <com.google.android.material.checkbox.MaterialCheckBox android:id="@+id/cb_tool_camera" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="High-Speed Cameras (120 FPS+)" android:textColor="@color/white" app:buttonTint="@color/brand_blue" />
+                <com.google.android.material.checkbox.MaterialCheckBox android:id="@+id/cb_tool_wearables" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Wearable IoT Sensors" android:textColor="@color/white" app:buttonTint="@color/brand_blue" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:hint="Primary Metrics of Interest"
+                    android:textColorHint="@color/text_secondary"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:boxStrokeColor="@color/brand_blue"
+                    app:hintTextColor="@color/brand_blue">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_target_metrics"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:gravity="top"
+                        android:hint="e.g. Gait Analysis, Joint Angles"
+                        android:textColorHint="@color/text_tertiary"
+                        android:textColor="@color/white" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <!-- STEP 3: COACH ENROLLMENT -->
+            <LinearLayout
+                android:id="@+id/layout_step3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Enroll Academy Coaches" android:textColor="@color/text_secondary" android:textSize="12sp" android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/coach_list_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="12dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_add_coach"
+                    style="@style/Widget.Material3.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+ Add Another Coach"
+                    android:textColor="@color/brand_blue" />
+            </LinearLayout>
+
+            <!-- STEP 4 & 5 SUMMARY -->
+            <LinearLayout
+                android:id="@+id/layout_step_final"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Data Compliance" android:textColor="@color/text_secondary" android:textSize="12sp" android:textStyle="bold" />
+                <com.google.android.material.checkbox.MaterialCheckBox android:id="@+id/cb_consent_system" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="We have a parental consent system for minors" android:textColor="@color/white" app:buttonTint="@color/brand_blue" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:hint="DPO Contact Email"
+                    android:textColorHint="@color/text_secondary"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:boxStrokeColor="@color/brand_blue"
+                    app:hintTextColor="@color/brand_blue">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_dpo_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:inputType="textEmailAddress" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+        </FrameLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <LinearLayout
+        android:id="@+id/navigation_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        android:background="@color/background_dark"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_prev"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="Back"
+            app:backgroundTint="@color/card_bg_light"
+            android:textColor="@color/white"
+            android:visibility="invisible"
+            android:layout_marginEnd="12dp"
+            app:cornerRadius="12dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_next_submit"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="2"
+            android:text="Next Step"
+            app:backgroundTint="@color/brand_blue"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:cornerRadius="12dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

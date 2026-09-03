@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/inst_portal_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark"
+    tools:context=".InstitutionPortalActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent">
+        <include layout="@layout/layout_global_header" android:id="@+id/layout_global_header" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsv_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="80dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Global Search -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:cardBackgroundColor="#1E293B"
+                app:cardCornerRadius="16dp"
+                app:strokeWidth="0dp">
+                <EditText
+                    android:id="@+id/et_global_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="@android:color/transparent"
+                    android:drawableStart="@android:drawable/ic_menu_search"
+                    android:drawablePadding="12dp"
+                    android:hint="Search Students, Teams, Equipment..."
+                    android:paddingHorizontal="16dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/text_tertiary"
+                    android:inputType="text" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- 1. Institution Profile Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_inst_profile"
+                style="@style/M3CardStyle"
+                android:layout_marginBottom="20dp"
+                app:cardBackgroundColor="@color/card_bg">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/iv_inst_logo"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_academy_emblem"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.SmallComponent" />
+
+                    <TextView
+                        android:id="@+id/tv_inst_name_display"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="Institution Name"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@id/btn_edit_inst_profile"
+                        app:layout_constraintStart_toEndOf="@id/iv_inst_logo"
+                        app:layout_constraintTop_toTopOf="@id/iv_inst_logo" />
+
+                    <TextView
+                        android:id="@+id/tv_inst_type_location"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="School • City, District"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp"
+                        app:layout_constraintEnd_toEndOf="@id/tv_inst_name_display"
+                        app:layout_constraintStart_toStartOf="@id/tv_inst_name_display"
+                        app:layout_constraintTop_toBottomOf="@id/tv_inst_name_display" />
+
+                    <TextView
+                        android:id="@+id/tv_inst_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="INST-ID: ----"
+                        android:textColor="@color/text_tertiary"
+                        android:textSize="11sp"
+                        app:layout_constraintStart_toStartOf="@id/tv_inst_type_location"
+                        app:layout_constraintTop_toBottomOf="@id/tv_inst_type_location" />
+
+                    <TextView
+                        android:id="@+id/tv_inst_verification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="Verified"
+                        android:textColor="@color/brand_green"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@id/tv_inst_id"
+                        app:layout_constraintTop_toTopOf="@id/tv_inst_id" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_edit_inst_profile"
+                        style="@style/Widget.Material3.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Edit"
+                        android:textColor="@color/brand_blue"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- 2. Institution Overview Stats -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="Institution Overview"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <GridLayout
+                android:id="@+id/grid_stats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:layout_marginBottom="24dp">
+
+                <include layout="@layout/item_dashboard_stat_card" android:id="@+id/stat_total_students" />
+                <include layout="@layout/item_dashboard_stat_card" android:id="@+id/stat_sports_students" />
+                <include layout="@layout/item_dashboard_stat_card" android:id="@+id/stat_pe_teachers" />
+                <include layout="@layout/item_dashboard_stat_card" android:id="@+id/stat_sports_teams" />
+                <include layout="@layout/item_dashboard_stat_card" android:id="@+id/stat_sports_offered" />
+                <include layout="@layout/item_dashboard_stat_card" android:id="@+id/stat_grounds" />
+                <include layout="@layout/item_dashboard_stat_card" android:id="@+id/stat_equipment" />
+                <include layout="@layout/item_dashboard_stat_card" android:id="@+id/stat_attendance" />
+                <include layout="@layout/item_dashboard_stat_card" android:id="@+id/stat_upcoming_events" />
+                <include layout="@layout/item_dashboard_stat_card" android:id="@+id/stat_tournaments" />
+                <include layout="@layout/item_dashboard_stat_card" android:id="@+id/stat_pending_approvals" />
+                <include layout="@layout/item_dashboard_stat_card" android:id="@+id/stat_medical_cases" />
+
+            </GridLayout>
+
+            <!-- 3. Sports Offered Section -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sports Offered"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_add_inst_sport"
+                    style="@style/Widget.Material3.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+ Manage Sports"
+                    android:textColor="@color/brand_blue"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_sport_summaries"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="24dp" />
+
+            <!-- 4. Quick Actions Grid -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="Institution Management"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <GridLayout
+                android:id="@+id/grid_portal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="1"
+                android:paddingBottom="40dp">
+
+                <include layout="@layout/item_portal_list_card" android:id="@+id/btn_student_mgmt" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <include layout="@layout/item_portal_list_card" android:id="@+id/btn_pe_portal" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <include layout="@layout/item_portal_list_card" android:id="@+id/btn_inst_teams" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <include layout="@layout/item_portal_list_card" android:id="@+id/btn_inst_equipment" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <include layout="@layout/item_portal_list_card" android:id="@+id/btn_inst_booking" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <include layout="@layout/item_portal_list_card" android:id="@+id/btn_fit_india" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <include layout="@layout/item_portal_list_card" android:id="@+id/btn_practical_exam" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <include layout="@layout/item_portal_list_card" android:id="@+id/btn_ai_student_dash" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <include layout="@layout/item_portal_list_card" android:id="@+id/btn_inst_tournament" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <include layout="@layout/item_portal_list_card" android:id="@+id/btn_inst_medical" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <include layout="@layout/item_portal_list_card" android:id="@+id/btn_inst_calendar" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <include layout="@layout/item_portal_list_card" android:id="@+id/btn_student_transfer" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <include layout="@layout/item_portal_list_card" android:id="@+id/btn_inst_reports" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <include layout="@layout/item_portal_list_card" android:id="@+id/btn_parent_portal" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <include layout="@layout/item_portal_list_card" android:id="@+id/btn_student_sports_profile" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <include layout="@layout/item_portal_list_card" android:id="@+id/btn_scholarship_mgmt" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <include layout="@layout/item_portal_list_card" android:id="@+id/btn_university_recruitment" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <include layout="@layout/item_portal_list_card" android:id="@+id/btn_sports_analytics" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <include layout="@layout/item_portal_list_card" android:id="@+id/btn_attendance_analytics" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <include layout="@layout/item_portal_list_card" android:id="@+id/btn_notification_center" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <include layout="@layout/item_portal_list_card" android:id="@+id/btn_ai_video_analysis" android:layout_width="match_parent" android:layout_height="wrap_content" />
+
+            </GridLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Loading Overlay -->
+    <FrameLayout
+        android:id="@+id/loading_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#CC020617"
+        android:visibility="gone">
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/brand_blue" />
+    </FrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

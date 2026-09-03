@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/card_bg">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add/Edit Coach"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/et_coach_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Coach Full Name"
+        android:textColor="@color/white"
+        android:textColorHint="@color/text_tertiary"
+        android:backgroundTint="@color/brand_blue" />
+
+    <EditText
+        android:id="@+id/et_coach_specialization"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="Specialization (e.g. Cricket)"
+        android:textColor="@color/white"
+        android:textColorHint="@color/text_tertiary"
+        android:backgroundTint="@color/brand_blue" />
+
+    <EditText
+        android:id="@+id/et_coach_experience"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="Years of Experience"
+        android:inputType="number"
+        android:textColor="@color/white"
+        android:textColorHint="@color/text_tertiary"
+        android:backgroundTint="@color/brand_blue" />
+
+    <EditText
+        android:id="@+id/et_coach_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="Email Address"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/white"
+        android:textColorHint="@color/text_tertiary"
+        android:backgroundTint="@color/brand_blue" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_confirm_add_coach"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="32dp"
+        android:text="SAVE COACH"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:cornerRadius="12dp"
+        app:backgroundTint="@color/brand_blue" />
+
+</LinearLayout>

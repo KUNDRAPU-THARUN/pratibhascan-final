@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dashboard_card"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Facility Booking"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/et_facility_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Facility Name (e.g. Pool, Gym)"
+        android:textColor="@color/white"
+        android:textColorHint="@color/text_secondary" />
+
+    <EditText
+        android:id="@+id/et_booking_purpose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="Purpose (e.g. Practice, Competition)"
+        android:textColor="@color/white"
+        android:textColorHint="@color/text_secondary" />
+
+    <Button
+        android:id="@+id/btn_confirm_booking"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#3B82F6"
+        android:text="CONFIRM BOOKING"
+        android:textColor="@color/white" />
+
+</LinearLayout>

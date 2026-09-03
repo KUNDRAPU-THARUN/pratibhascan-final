@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/padding_medium"
+    android:paddingBottom="48dp"
+    android:clipToPadding="false">
+
+    <!-- Profile Header Card -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/card_bg_light"
+        app:cardCornerRadius="@dimen/card_corner_radius"
+        app:strokeWidth="@dimen/card_stroke_width"
+        app:strokeColor="@color/button_border">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <ImageView
+                android:id="@+id/iv_profile_pic"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:src="@android:drawable/ic_menu_myplaces"
+                android:background="@drawable/bg_module_item"
+                android:padding="12dp"
+                android:contentDescription="@string/nav_profile"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/text_secondary" />
+
+            <TextView
+                android:id="@+id/tv_profile_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="8dp"
+                android:text="Athlete Name"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/btn_profile_settings"
+                app:layout_constraintStart_toEndOf="@id/iv_profile_pic"
+                app:layout_constraintTop_toTopOf="@id/iv_profile_pic" />
+
+            <TextView
+                android:id="@+id/tv_profile_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PR-ATH-XXXX"
+                android:textColor="@color/brand_gold"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/tv_profile_name"
+                app:layout_constraintTop_toBottomOf="@id/tv_profile_name" />
+
+            <!-- Prototype Talent Score -->
+            <LinearLayout
+                android:id="@+id/ll_talent_score_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_talent_score_profile_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="--"
+                    android:textColor="@color/brand_gold"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TALENT SCORE"
+                    android:textColor="@color/text_tertiary"
+                    android:textSize="8sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/btn_profile_settings"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@android:drawable/ic_menu_manage"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="4dp"
+                android:contentDescription="@string/settings"
+                app:tint="@color/text_secondary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_edit_profile"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EDIT PASSPORT"
+                android:textColor="@color/brand_blue"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:padding="0dp"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                app:layout_constraintStart_toStartOf="@id/tv_profile_name"
+                app:layout_constraintTop_toBottomOf="@id/tv_profile_id" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Streaks & XP Stats -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/card_bg_light"
+            app:cardCornerRadius="16dp"
+            android:layout_marginEnd="8dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:gravity="center">
+                <TextView android:id="@+id/tv_streak_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="7" android:textColor="@color/brand_orange" android:textSize="20sp" android:textStyle="bold" />
+                <TextView android:id="@+id/tv_streak_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:text="Day Streak 🔥" android:textColor="@color/text_secondary" android:textSize="11sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btn_achievements_stats"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/card_bg_light"
+            app:cardCornerRadius="16dp"
+            android:clickable="true"
+            android:focusable="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:orientation="vertical"
+                android:gravity="center">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/btn_upload_achievement_profile"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentEnd="true"
+                        android:src="@android:drawable/ic_input_add"
+                        app:tint="@color/brand_blue"
+                        android:contentDescription="@string/step_title_media" />
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <TextView android:id="@+id/tv_xp_points" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1240" android:textColor="@color/brand_blue" android:textSize="20sp" android:textStyle="bold" />
+                    <TextView android:id="@+id/tv_xp_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:text="Total XP" android:textColor="@color/text_secondary" android:textSize="11sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+
+    <!-- Role-Specific Profile Sections -->
+    <include layout="@layout/layout_profile_academy" />
+    <include layout="@layout/layout_profile_institution" />
+
+    <!-- Performance Metrics Grid -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_performance_metrics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cardBackgroundColor="@color/card_bg_light"
+        app:cardCornerRadius="@dimen/card_corner_radius">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Performance Metrics"
+                android:textColor="@color/brand_blue"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:columnCount="2"
+                android:alignmentMode="alignMargins">
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SPEED" android:textColor="@color/text_tertiary" android:textSize="10sp" android:textStyle="bold" />
+                    <ProgressBar android:id="@+id/pb_speed" style="@android:style/Widget.ProgressBar.Horizontal" android:layout_width="match_parent" android:layout_height="4dp" android:layout_marginTop="4dp" android:progress="70" android:progressTint="@color/brand_blue" />
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:layout_marginStart="16dp" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="AGILITY" android:textColor="@color/text_tertiary" android:textSize="10sp" android:textStyle="bold" />
+                    <ProgressBar android:id="@+id/pb_agility" style="@android:style/Widget.ProgressBar.Horizontal" android:layout_width="match_parent" android:layout_height="4dp" android:layout_marginTop="4dp" android:progress="75" android:progressTint="@color/brand_gold" />
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:layout_marginTop="12dp" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="STAMINA" android:textColor="@color/text_tertiary" android:textSize="10sp" android:textStyle="bold" />
+                    <ProgressBar android:id="@+id/pb_stamina" style="@android:style/Widget.ProgressBar.Horizontal" android:layout_width="match_parent" android:layout_height="4dp" android:layout_marginTop="4dp" android:progress="80" android:progressTint="@color/brand_blue" />
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:layout_marginStart="16dp" android:layout_marginTop="12dp" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="STRENGTH" android:textColor="@color/text_tertiary" android:textSize="10sp" android:textStyle="bold" />
+                    <ProgressBar android:id="@+id/pb_strength" style="@android:style/Widget.ProgressBar.Horizontal" android:layout_width="match_parent" android:layout_height="4dp" android:layout_marginTop="4dp" android:progress="65" android:progressTint="@color/brand_gold" />
+                </LinearLayout>
+
+            </GridLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Athlete Specific Analytics -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/block_athlete_analytics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cardBackgroundColor="@color/card_bg_light"
+        app:cardCornerRadius="@dimen/card_corner_radius"
+        android:visibility="visible">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Performance Improvement Trend"
+                android:textColor="@color/brand_blue"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Weekly skill score &amp; AI assessment growth"
+                android:textColor="@color/text_secondary"
+                android:textSize="11sp" />
+            <com.example.prathibhascanfinal.AnalyticsGraphView
+                android:id="@+id/graph_athlete_performance"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="16dp" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Physical Passport Details -->
+    <GridLayout
+        android:id="@+id/grid_physical_stats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:columnCount="2"
+        android:alignmentMode="alignMargins">
+
+        <com.google.android.material.card.MaterialCardView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" app:cardBackgroundColor="@color/card_bg_light" app:cardCornerRadius="12dp" android:layout_margin="4dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="12dp" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="HEIGHT" android:textColor="@color/text_tertiary" android:textSize="9sp" android:textStyle="bold" />
+                <TextView android:id="@+id/tv_stat_height" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--- cm" android:textColor="@color/white" android:textSize="14sp" android:textStyle="bold" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" app:cardBackgroundColor="@color/card_bg_light" app:cardCornerRadius="12dp" android:layout_margin="4dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="12dp" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="WING SPAN" android:textColor="@color/text_tertiary" android:textSize="9sp" android:textStyle="bold" />
+                <TextView android:id="@+id/tv_stat_wingspan" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--- cm" android:textColor="@color/white" android:textSize="14sp" android:textStyle="bold" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" app:cardBackgroundColor="@color/card_bg_light" app:cardCornerRadius="12dp" android:layout_margin="4dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="12dp" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="DOMINANT" android:textColor="@color/text_tertiary" android:textSize="9sp" android:textStyle="bold" />
+                <TextView android:id="@+id/tv_stat_side" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Right" android:textColor="@color/white" android:textSize="14sp" android:textStyle="bold" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" app:cardBackgroundColor="@color/card_bg_light" app:cardCornerRadius="12dp" android:layout_margin="4dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="12dp" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TIER" android:textColor="@color/text_tertiary" android:textSize="9sp" android:textStyle="bold" />
+                <TextView android:id="@+id/tv_stat_tier" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="District" android:textColor="@color/brand_gold" android:textSize="14sp" android:textStyle="bold" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </GridLayout>
+
+    <!-- HEALTH ECOSYSTEM -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/btn_open_health"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cardBackgroundColor="@color/card_bg_light"
+        app:cardCornerRadius="16dp"
+        android:clickable="true"
+        android:focusable="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:orientation="vertical">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TOTAL HEALTH ECOSYSTEM" android:textColor="@color/brand_blue" android:textSize="14sp" android:textStyle="bold" />
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:src="@android:drawable/ic_menu_edit"
+                    app:tint="@color/brand_blue"
+                    android:contentDescription="@string/btn_edit_profile" />
+            </RelativeLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:orientation="horizontal">
+                <TextView android:id="@+id/tv_profile_health_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Status: Fit &amp; Good" android:textColor="@color/brand_green" android:textSize="12sp" android:textStyle="bold" />
+                <View android:layout_width="16dp" android:layout_height="0dp" />
+                <TextView android:id="@+id/tv_profile_hydration" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Hydration: 2.5L" android:textColor="@color/white" android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- THE GLORY TIMELINE -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/btn_open_vault"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:cardBackgroundColor="#0F172A"
+        app:cardCornerRadius="20dp"
+        android:clickable="true"
+        android:focusable="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:orientation="vertical">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="THE GLORY TIMELINE" android:textColor="@color/white" android:textSize="14sp" android:textStyle="bold" />
+                <ImageView
+                    android:id="@+id/btn_add_achievement_profile"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_alignParentEnd="true"
+                    android:src="@android:drawable/ic_input_add"
+                    android:padding="6dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    app:tint="@color/brand_gold"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:contentDescription="Add Achievement" />
+            </RelativeLayout>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Verified History &amp; Participation" android:textColor="@color/text_secondary" android:textSize="11sp" />
+            <LinearLayout
+                android:id="@+id/container_timeline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="No verified achievements yet" android:textColor="@color/text_tertiary" android:textSize="11sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Logout Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_logout_profile"
+        style="@style/Widget.Material3.Button.TonalButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"
+        android:text="LOGOUT FROM ECOSYSTEM"
+        android:textColor="@color/brand_red"
+        app:backgroundTint="@color/card_bg_light"
+        app:cornerRadius="12dp"
+        android:paddingVertical="14dp"
+        android:textStyle="bold" />
+
+</LinearLayout>

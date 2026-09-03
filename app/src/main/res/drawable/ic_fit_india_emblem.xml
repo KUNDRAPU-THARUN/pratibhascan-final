@@ -1,0 +1,22 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+    <!-- Circle Saffron -->
+    <path
+        android:strokeColor="#FF9933"
+        android:strokeWidth="4"
+        android:pathData="M50,50m-45,0a45,45 0,1 1,90 0a45,45 0,1 1,-90 0" />
+    <!-- Human Runner White -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M55,30m-5,0a5,5 0,1 1,10 0a5,5 0,1 1,-5 0 M55,35 L45,45 L35,40 M45,45 L50,60 L45,80 M50,60 L65,70 L75,80"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2" />
+    <!-- Chakra Blue -->
+    <path
+        android:strokeColor="#000080"
+        android:strokeWidth="1"
+        android:pathData="M50,50m-15,0a15,15 0,1 1,30 0a15,15 0,1 1,-30 0" />
+</vector>

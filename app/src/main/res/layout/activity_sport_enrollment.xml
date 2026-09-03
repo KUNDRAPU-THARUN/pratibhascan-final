@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#020617"
+    android:fitsSystemWindows="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/tv_enroll_sport_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enroll in Discipline"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Establish your presence for specialized academy scouting."
+                android:textColor="#94A3B8"
+                android:textSize="14sp" />
+
+            <!-- FORM CARD -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/M3CardStyle"
+                android:layout_marginTop="32dp"
+                app:cardBackgroundColor="@color/card_bg_light">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="24dp">
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Technical Career Specifics" android:textColor="@color/brand_blue" android:textSize="14sp" android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Fill in your pro-parameters for AI calibration." android:textColor="@color/text_tertiary" android:textSize="11sp" />
+
+                    <!-- Dynamic Sport Fields Container -->
+                    <LinearLayout
+                        android:id="@+id/container_dynamic_fields"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="16dp" />
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/button_border" android:layout_marginTop="24dp" android:layout_marginBottom="24dp" />
+
+                    <!-- Position/Style -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Main Position / Style"
+                        app:boxCornerRadiusBottomEnd="12dp" app:boxCornerRadiusBottomStart="12dp" app:boxCornerRadiusTopEnd="12dp" app:boxCornerRadiusTopStart="12dp">
+                        <com.google.android.material.textfield.TextInputEditText android:id="@+id/et_enroll_position" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="@color/white" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Best Performance -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:hint="Personal Best (Time/Runs/Record)"
+                        app:boxCornerRadiusBottomEnd="12dp" app:boxCornerRadiusBottomStart="12dp" app:boxCornerRadiusTopEnd="12dp" app:boxCornerRadiusTopStart="12dp">
+                        <com.google.android.material.textfield.TextInputEditText android:id="@+id/et_enroll_best" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="@color/white" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Experience -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:hint="Experience (Years)"
+                        app:boxCornerRadiusBottomEnd="12dp" app:boxCornerRadiusBottomStart="12dp" app:boxCornerRadiusTopEnd="12dp" app:boxCornerRadiusTopStart="12dp">
+                        <com.google.android.material.textfield.TextInputEditText android:id="@+id/et_enroll_exp" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="number" android:textColor="@color/white" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- UPLOAD BUNDLE -->
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="Verified Proof (Career Passport)" android:textColor="@color/white" android:textSize="14sp" android:textStyle="bold" />
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="12dp">
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_enroll_cert"
+                            style="@style/Widget.Material3.Button.TonalButton"
+                            android:layout_width="0dp"
+                            android:layout_height="56dp"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="8dp"
+                            android:text="CERTIFICATE"
+                            android:textSize="10sp"
+                            app:backgroundTint="@color/button_border"
+                            app:icon="@android:drawable/ic_menu_camera"
+                            app:iconTint="@color/brand_gold" />
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_enroll_video"
+                            style="@style/Widget.Material3.Button.TonalButton"
+                            android:layout_width="0dp"
+                            android:layout_height="56dp"
+                            android:layout_weight="1"
+                            android:text="PROOF VIDEO"
+                            android:textSize="10sp"
+                            app:backgroundTint="@color/button_border"
+                            app:icon="@android:drawable/ic_menu_slideshow"
+                            app:iconTint="@color/brand_blue" />
+                    </LinearLayout>
+
+                    <TextView android:id="@+id/tv_enroll_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="Connect media for scout radar" android:textColor="@color/text_tertiary" android:textSize="10sp" />
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/cb_grant_scout_access"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:checked="true"
+                        android:text="Allow scouts to verify my performance"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp"
+                        app:buttonTint="@color/brand_gold" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_submit_enrollment"
+                        android:layout_width="match_parent"
+                        android:layout_height="64dp"
+                        android:layout_marginTop="24dp"
+                        android:text="VERIFY &amp; ENROLL"
+                        app:backgroundTint="@color/brand_gold"
+                        android:textColor="@color/background_dark"
+                        android:textStyle="bold"
+                        app:cornerRadius="16dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/btn_enroll_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="32dp"
+                android:text="← Cancel"
+                android:textColor="#94A3B8"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

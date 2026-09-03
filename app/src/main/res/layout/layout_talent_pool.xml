@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/padding_medium"
+    android:paddingBottom="48dp"
+    android:clipToPadding="false">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_talent_pool"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_headline_small"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Connect with Academies, Scouts, and Coaches."
+        android:textColor="@color/text_secondary"
+        android:textSize="@dimen/text_size_body_medium" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="24dp"
+        app:cardBackgroundColor="@color/card_bg_light"
+        app:cardCornerRadius="@dimen/card_corner_radius"
+        app:strokeWidth="@dimen/card_stroke_width"
+        app:strokeColor="@color/button_border">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@android:drawable/ic_dialog_map"
+                android:alpha="0.15"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/desc_map" />
+
+            <TextView
+                android:id="@+id/tv_marketplace_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Talent Marketplace Active"
+                android:textColor="@color/brand_blue"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/btn_explore_scouts"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_explore_scouts"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="EXPLORE SCOUTS"
+                android:textColor="@color/white"
+                app:backgroundTint="@color/brand_blue"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_marketplace_status" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/tv_label_invitations"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Academy Invitations"
+        android:textColor="@color/brand_gold"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_academy_invitations"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:nestedScrollingEnabled="false"
+        android:visibility="gone" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Featured Opportunities"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_title_large"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_talent_pool_tournaments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:nestedScrollingEnabled="false"
+        tools:listitem="@layout/item_management_card" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="80dp" />
+
+</LinearLayout>

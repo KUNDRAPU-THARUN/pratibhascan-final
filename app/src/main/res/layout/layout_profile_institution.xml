@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_institution_profile_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <!-- Institutional Health & Fitness Index -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_dashboard_card"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Institutional Fitness Index"
+            android:textColor="@color/brand_blue"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Average BMI &amp; Stamina trends across students"
+            android:textColor="#94A3B8"
+            android:textSize="11sp" />
+
+        <com.example.prathibhascanfinal.AnalyticsGraphView
+            android:id="@+id/graph_institution_fitness"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginTop="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+            <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="Avg Score: 68/100" android:textColor="@color/brand_gold" android:textSize="12sp" android:textStyle="bold" />
+            <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="In Talent Pool: 12" android:textColor="@color/brand_green" android:textSize="12sp" android:gravity="end" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Affiliation & Authority -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_dashboard_card"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Governance &amp; Affiliation"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:columnCount="2">
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Board:" android:textColor="#94A3B8" android:textSize="12sp" />
+            <TextView android:id="@+id/tv_inst_board_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="CBSE" android:textColor="@color/white" android:textSize="12sp" android:layout_marginStart="8dp" />
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Principal:" android:textColor="#94A3B8" android:textSize="12sp" android:layout_marginTop="4dp" />
+            <TextView android:id="@+id/tv_inst_principal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Dr. Sarah Wilson" android:textColor="@color/white" android:textSize="12sp" android:layout_marginStart="8dp" android:layout_marginTop="4dp" />
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="PE Head:" android:textColor="#94A3B8" android:textSize="12sp" android:layout_marginTop="4dp" />
+            <TextView android:id="@+id/tv_inst_pe_head" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Coach Vikram" android:textColor="@color/white" android:textSize="12sp" android:layout_marginStart="8dp" android:layout_marginTop="4dp" />
+        </GridLayout>
+    </LinearLayout>
+
+</LinearLayout>

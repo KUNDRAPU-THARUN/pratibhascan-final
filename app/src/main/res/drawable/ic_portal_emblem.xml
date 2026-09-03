@@ -1,0 +1,20 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+    <!-- Portal / Gateway -->
+    <path
+        android:strokeColor="#A855F7"
+        android:strokeWidth="6"
+        android:pathData="M20,80 L20,30 Q50,10 80,30 L80,80" />
+    <!-- User Group -->
+    <path
+        android:fillColor="#D8B4FE"
+        android:pathData="M35,60m-5,0a5,5 0,1 1,10 0a5,5 0,1 1,-5 0 M50,55m-6,0a6,6 0,1 1,12 0a6,6 0,1 1,-12 0 M65,60m-5,0a5,5 0,1 1,10 0a5,5 0,1 1,-5 0" />
+    <!-- Dashboard Lines -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2"
+        android:pathData="M30,75 L70,75 M40,85 L60,85" />
+</vector>

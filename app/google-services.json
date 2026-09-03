@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "463149328896",
+    "project_id": "pratibhascanfinal",
+    "storage_bucket": "pratibhascanfinal.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:463149328896:android:3c5c75a7fd8219e2c506e5",
+        "android_client_info": {
+          "package_name": "com.example.prathibhascanfinal"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVOHi1jUod-7RFUd59TAMUoLctYIdNI8s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

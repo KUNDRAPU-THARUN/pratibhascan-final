@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dashboard_card"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Practical Exam"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/et_exam_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Exam Title (e.g. Annual Practical)"
+        android:textColor="@color/white"
+        android:textColorHint="@color/text_secondary" />
+
+    <EditText
+        android:id="@+id/et_exam_grade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="Target Grade (e.g. Class XII)"
+        android:textColor="@color/white"
+        android:textColorHint="@color/text_secondary" />
+
+    <EditText
+        android:id="@+id/et_max_marks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="Max Marks"
+        android:inputType="number"
+        android:textColor="@color/white"
+        android:textColorHint="@color/text_secondary" />
+
+    <Button
+        android:id="@+id/btn_confirm_exam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#FACC15"
+        android:text="CREATE EXAM"
+        android:textColor="#020617" />
+
+</LinearLayout>

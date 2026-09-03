@@ -1,0 +1,14 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+    <!-- Pillar/Temple of Sports -->
+    <path
+        android:fillColor="#FACC15"
+        android:pathData="M15,80 L85,80 L85,70 L15,70 Z M20,65 L30,65 L30,35 L20,35 Z M45,65 L55,65 L55,35 L45,35 Z M70,65 L80,65 L80,35 L70,35 Z M10,30 L50,10 L90,30 Z" />
+    <!-- Center Star -->
+    <path
+        android:fillColor="#020617"
+        android:pathData="M50,15 L52,22 L58,22 L53,26 L55,33 L50,29 L45,33 L47,26 L42,22 L48,22 Z" />
+</vector>

@@ -1,0 +1,19 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+    <!-- Map Shape -->
+    <path
+        android:strokeColor="#3B82F6"
+        android:strokeWidth="4"
+        android:pathData="M10,20 L40,10 L70,20 L90,10 L90,80 L60,90 L30,80 L10,90 Z" />
+    <path
+        android:strokeColor="#3B82F6"
+        android:strokeWidth="1"
+        android:pathData="M40,10 L40,80 M70,20 L70,90" />
+    <!-- Pin Location -->
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M50,50m-8,0a8,8 0,1 1,16 0a8,8 0,1 1,-16 0 M50,58 L45,68 L55,68 Z" />
+</vector>
