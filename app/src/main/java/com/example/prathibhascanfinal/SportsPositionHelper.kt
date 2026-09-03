@@ -99,6 +99,19 @@ object SportsPositionHelper {
         return listOf("School Team", "College Team", "House Team", "Class Team", "Practice Group", "Development Squad")
     }
 
+    fun getAcademyTeamTypes(): List<String> {
+        return listOf(
+            "Elite Squad",
+            "High Performance Squad",
+            "Development Squad",
+            "Junior Squad",
+            "Senior Squad",
+            "Professional Squad",
+            "Practice Group",
+            "Academy Squad"
+        )
+    }
+
     fun getGenders(): List<String> {
         return listOf("Male", "Female", "Mixed")
     }

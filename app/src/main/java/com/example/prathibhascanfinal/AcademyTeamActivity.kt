@@ -208,7 +208,7 @@ class AcademyTeamActivity : BaseActivity() {
         }
 
         // 4. Team Type Options
-        val typeOptions = SportsPositionHelper.getTeamTypes()
+        val typeOptions = SportsPositionHelper.getAcademyTeamTypes()
         val typeAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, typeOptions)
         spType?.adapter = typeAdapter
 
