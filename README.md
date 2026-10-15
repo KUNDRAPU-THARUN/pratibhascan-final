@@ -317,11 +317,8 @@ Here is a visual walkthrough of the PratibhaScan mobile application interface ac
 ---
 
 ##  Team : Idea Ignites Behind PratibhaScan
-
-
-- 1. A Veda Amrutha Varashini
-- 2. G Kalyani Reddy   
-- 3. K Tharun Kumar
+ 
+- 1. K Tharun Kumar
 
 ##  Repository
 
