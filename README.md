@@ -6,13 +6,6 @@
 
 ---
 
-## 🎥 Project Demonstration
-
-[![PratibhaScan Project Demonstration](https://img.youtube.com/vi/G-P0wLsKPcM/maxresdefault.jpg)](https://youtu.be/G-P0wLsKPcM)
-
-> 🎬 Watch the PratibhaScan demonstration video above to see the AI pose analysis, multi-role dashboard, and opportunity discovery in action.
-
----
 
 ## 🧑‍⚖️ Evaluator Quick Start
 
